@@ -1,0 +1,95 @@
+.topCollectionWrapper {
+  margin-top: 10vh;
+  .sellersHeading {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    .topSellers {
+      font-family: "Gilroy-Bold" !important;
+      font-weight: 800;
+      font-size: 32px;
+    }
+    .sellersDropdown {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      .sellersYear {
+        color: red;
+        font-family: "Gilroy-Bold" !important;
+        font-weight: 800;
+        font-size: 36px;
+        margin-left: 10px;
+      }
+      .sellers-content {
+        display: none;
+      }
+    }
+    .sellersDropdown:hover .sellers-content {
+      display: block;
+      width: 80px;
+      position: absolute;
+      text-align: center;
+      color: #fff;
+      padding: 10px 15px 10px 15px;
+      z-index: 1111;
+      background-color: white;
+      color: black;
+      margin-top: 50px;
+      box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.15);
+      > p {
+        cursor: pointer;
+      }
+    }
+  }
+  .sellExtraordinary {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0px;
+  }
+  .sellersCardWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-left: 50px;
+    .cardWrapper {
+      flex: 1;
+      margin-bottom: 20px;
+      margin-right: 50px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .topCollectionWrapper {
+    margin-top: 10vh;
+    .sellersHeading {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .sellExtraordinary {
+      font-family: "Roboto";
+      font-weight: 400;
+      font-size: 16px;
+      margin: 0px;
+      text-align: center;
+    }
+    .sellersCardWrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      margin-top: 50px;
+      margin-left: 50px;
+      .cardWrapper {
+        flex: 1;
+        margin-bottom: 20px;
+        margin-right: 50px;
+      }
+    }
+  }
+}

@@ -1,15 +1,10 @@
 import React from "react";
 import "./style.scss";
-import {
-  Card,
-  CardImg,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  CardText,
-  Button,
-} from "reactstrap";
+
+import { useNavigate } from "react-router-dom";
+
 const BrowseCard = () => {
+  const navigate = useNavigate();
   return (
     <div className="browseCard">
       <div className="cardImage">
@@ -36,7 +31,7 @@ const BrowseCard = () => {
           </div>
         </div>
         <div className="buyNow">
-          <span>BUY NOW</span>
+          <span onClick={() => navigate("/product-detail")}>BUY NOW</span>
           <img src="/images/heart.svg" />
         </div>
       </div>

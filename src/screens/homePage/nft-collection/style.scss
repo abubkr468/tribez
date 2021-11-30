@@ -1,0 +1,67 @@
+.nftCollectionWrapper {
+  margin-top: 10%;
+
+  .collectionNFT {
+    font-family: "Gilroy-Medium";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    text-align: left;
+  }
+  .discoverNFT {
+    font-family: "Roboto";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  .carouselWrapper {
+    height: 450px;
+    .innerSlider {
+      height: 450px;
+    }
+    .itemClass {
+    }
+    .dotClass {
+    }
+    .react-multiple-carousel__arrow--left {
+      background-color: #f2f2f2;
+      color: darkblue;
+      position: absolute;
+      left: 0px;
+    }
+    .react-multiple-carousel__arrow--right {
+      background-color: #f2f2f2;
+      position: absolute;
+      right: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .nftCollectionWrapper {
+    margin-top: 10%;
+    .collectionNFT {
+      font-family: Gilroy;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 800;
+      text-align: center;
+    }
+    .discoverNFT {
+      font-family: Roboto;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      text-align: center;
+    }
+    .carouselWrapper {
+      height: 450px;
+      .innerSlider {
+        height: 450px;
+        margin-left: 50px;
+      }
+    }
+  }
+}
