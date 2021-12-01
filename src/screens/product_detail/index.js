@@ -60,14 +60,11 @@ const ProductDetail = () => {
           <div className="product-detail-wrapper">
             <Row>
               <Col lg="6">
-                <video
-                  className="video"
-                  src="/video.mp4"
-                  autoPlay
-                  controls
-                  loop={true}
-                  type="video/mp4"
-                />
+                <div className="video">
+                  <div className="detail-play-button">
+                    <img src="/images/play-btn.svg" alt="img" />
+                  </div>
+                </div>
               </Col>
               <Col lg="6">
                 <div className="detail-wrapper">
@@ -176,7 +173,7 @@ const ProductDetail = () => {
           </div>
           <div className="nft-market-cards">
             {[...Array(4)].map((i) => (
-              <div>
+              <div className="col-lg-3 col-md-4 col-sm-6">
                 <BrowseCard />
               </div>
             ))}

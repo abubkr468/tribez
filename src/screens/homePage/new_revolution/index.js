@@ -8,7 +8,7 @@ export const NewRevolution = () => {
     <div className="revolutionWrapper">
       <Row>
         <Col lg="6">
-          <div className="leftback"></div>
+          {/* <div className="leftback"></div> */}
           <div className="revolutionLeft">
             <h3 className="newRevolution">
               A new revolution in music & world of NFTS...

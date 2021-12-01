@@ -7,6 +7,8 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
+  Row,
+  Col,
 } from "reactstrap";
 import "./style.scss";
 import Page from "../../components/page";
@@ -17,7 +19,6 @@ const NFTMarketPlace = () => {
   const [isSelected, setIsSelected] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [newestIsOpen, setNewestIsOpen] = useState(false);
-  const [isClicked, setIsClicked] = useState(false);
 
   const toggleHandler = () => {
     setIsOpen(!isOpen);
@@ -33,53 +34,60 @@ const NFTMarketPlace = () => {
           <p className="nft-sub-heading">
             Discover, collect, and sell extraordinary NFTs
           </p>
-          <div className="nft-all-market">
-            <div className="market-wrapper">
-              {data.map((d, index) => (
-                <div
-                  className={
-                    isSelected === index
-                      ? "market-list"
-                      : "market-list-unSelected"
-                  }
-                  onClick={() => setIsSelected(index)}
-                >
-                  {d}
-                </div>
-              ))}
-            </div>
-            <div className="nft-filter">
-              <Dropdown isOpen={isOpen} toggle={toggleHandler}>
-                <DropdownToggle caret className="filter-button shadow-none">
-                  <img src="/images/filter.svg" />
-                  Filter
-                </DropdownToggle>
-                <DropdownMenu>
-                  <DropdownItem header>Header</DropdownItem>
-                  <DropdownItem>Another Action</DropdownItem>
-                  <DropdownItem>Another Action</DropdownItem>
-                </DropdownMenu>
-              </Dropdown>
-              <Dropdown isOpen={newestIsOpen} toggle={newestToggler}>
-                <DropdownToggle
-                  className=""
-                  caret
-                  className="newest-button shadow-none"
-                >
-                  <img src="/images/newest.svg" />
-                  Newest
-                </DropdownToggle>
-                <DropdownMenu>
-                  <DropdownItem header>Header</DropdownItem>
-                  <DropdownItem>Another Action</DropdownItem>
-                  <DropdownItem>Another Action</DropdownItem>
-                </DropdownMenu>
-              </Dropdown>
-            </div>
-          </div>
-          <div className="nft-market-cards">
+          {/* <div className="nft-all-market"> */}
+          <Row className="nft-all-market">
+            <Col className="market-wrapper" lg="6" md="12">
+              <div className="market-wrapper">
+                {data.map((d, index) => (
+                  <div
+                    className={
+                      isSelected === index
+                        ? "market-list"
+                        : "market-list-unSelected"
+                    }
+                    onClick={() => setIsSelected(index)}
+                  >
+                    {d}
+                  </div>
+                ))}
+              </div>
+            </Col>
+            <Col lg="6" md="12">
+              <div className="nft-filter">
+                <Dropdown isOpen={isOpen} toggle={toggleHandler}>
+                  <DropdownToggle caret className="filter-button shadow-none">
+                    <img src="/images/filter.svg" />
+                    Filter
+                  </DropdownToggle>
+                  <DropdownMenu>
+                    <DropdownItem header>Header</DropdownItem>
+                    <DropdownItem>Another Action</DropdownItem>
+                    <DropdownItem>Another Action</DropdownItem>
+                  </DropdownMenu>
+                </Dropdown>
+                <Dropdown isOpen={newestIsOpen} toggle={newestToggler}>
+                  <DropdownToggle
+                    className=""
+                    caret
+                    className="newest-button shadow-none"
+                  >
+                    <img src="/images/newest.svg" />
+                    Newest
+                  </DropdownToggle>
+                  <DropdownMenu>
+                    <DropdownItem header>Header</DropdownItem>
+                    <DropdownItem>Another Action</DropdownItem>
+                    <DropdownItem>Another Action</DropdownItem>
+                  </DropdownMenu>
+                </Dropdown>
+              </div>
+            </Col>
+          </Row>
+          {/* </div> */}
+
+          <div className="nft-market-cards col-12">
             {[...Array(16)].map((i) => (
-              <div>
+              <div className="card-nft col-lg-3 col-md-4 col-sm-6">
                 <BrowseCard />
               </div>
             ))}

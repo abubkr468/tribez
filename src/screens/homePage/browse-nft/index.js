@@ -1,14 +1,7 @@
 import React from "react";
+import { Button } from "reactstrap";
 import BrowseCard from "../../../components/browse-nft-card";
-import {
-  Card,
-  CardImg,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  CardText,
-  Button,
-} from "reactstrap";
+
 import "./style.scss";
 
 const BrowseNFT = () => {
@@ -24,7 +17,7 @@ const BrowseNFT = () => {
       </p>
       <div className="BrowseCardWrapper">
         {[...Array(8)].map((i) => (
-          <div className="cardWrap">
+          <div className="cardWrap col-lg-3">
             <BrowseCard />
           </div>
         ))}

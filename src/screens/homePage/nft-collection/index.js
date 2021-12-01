@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
-import NFTCollectionCard from "../../../components/nft-collection-card";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+
+import NFTCollectionCard from "../../../components/nft-collection-card";
 import "./style.scss";
 
 const NFTCollection = () => {
@@ -27,22 +28,7 @@ const NFTCollection = () => {
       items: 1,
     },
   };
-  const arrowStyle = {
-    background: "transparent",
-    border: 0,
-    color: "#fff",
-    fontSize: "80px",
-  };
-  const CustomRight = ({ onClick }) => (
-    <button className="arrow right" onClick={onClick} style={arrowStyle}>
-      <img src="/images/left-arrow.svg" />
-    </button>
-  );
-  const CustomLeft = ({ onClick }) => (
-    <button className="arrow left" onClick={onClick} style={arrowStyle}>
-      <img src="/images/right-arrow.svg" />
-    </button>
-  );
+
   return (
     <div className="nftCollectionWrapper">
       <h3 className="collectionNFT">Top Collection NFT’s</h3>
@@ -67,9 +53,6 @@ const NFTCollection = () => {
           transitionDuration={500}
           sliderClass="innerSlider"
           itemClass="itemClass"
-          // customButtonGroup
-          // customRightArrow={<CustomRight />}
-          // customLeftArrow={<CustomLeft />}
         >
           <div className="carouselItem">
             <NFTCollectionCard />

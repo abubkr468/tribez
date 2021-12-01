@@ -1,11 +1,12 @@
 import React from "react";
-import { NewRevolution } from "./new_revolution";
-import NFTCollection from "./nft-collection";
 import { Container } from "react-bootstrap";
+
+import NFTCollection from "./nft-collection";
 import TopArtists from "./top_sellers";
 import BrowseNFT from "./browse-nft";
 import Footer from "../../components/footer";
 import Page from "../../components/page";
+import { NewRevolution } from "./new_revolution";
 
 const HomePage = () => {
   return (

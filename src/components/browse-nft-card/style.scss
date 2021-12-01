@@ -1,22 +1,13 @@
-.browseCard {
-  width: 272px;
-  height: 397px;
-  border-radius: 10px;
-  border: 0.5px solid rgba(5, 3, 3, 0.2);
-  .cardImage {
+.card-wrap {
+  border-radius: 10px !important;
+  .card-img-wrapp {
     position: relative;
-    height: 70%;
-    background-image: url("../../bg/browse-card.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    .play-button {
+    .card-play-button {
       position: absolute;
-      bottom: 25px;
       right: 10px;
+      bottom: 15px;
       cursor: pointer;
     }
-  }
-  > img {
   }
   .browseCardBottom {
     .cardDetail {
@@ -24,8 +15,7 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      padding: 15px;
-      border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+      padding-bottom: 0px !important;
       .cardLeft {
         .theWeekend {
           margin: 0px;
@@ -103,7 +93,6 @@
       margin-right: 5px;
       font-family: "Roboto";
       font-size: 16px;
-      padding: 7px 10px 10px 10px;
       > span {
         color: #2081e2;
         cursor: pointer;

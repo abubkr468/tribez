@@ -4,9 +4,9 @@ import {
   NFTMarketPlace,
   ProductDetail,
   ProfileSetting,
+  CoverPage,
 } from "../screens";
-// import ProductDetail from "../screens";
-// import ProfileSetting from "../screens/profile_setting";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const TribezRouter = () => {
@@ -17,6 +17,7 @@ const TribezRouter = () => {
         <Route path="/market-place" element={<NFTMarketPlace />} />
         <Route path="/product-detail" element={<ProductDetail />} />
         <Route path="/profile-setting" element={<ProfileSetting />} />
+        <Route path="/cover-page" element={<CoverPage />} />
       </Routes>
     </BrowserRouter>
   );
