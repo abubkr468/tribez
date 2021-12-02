@@ -2,16 +2,19 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import { Row, Col } from "reactstrap";
 import "./style.scss";
+import { useNavigate } from "react-router-dom";
 
 export const NewRevolution = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="revolutionWrapper">
       <Row>
         <Col lg="6">
-          {/* <div className="leftback"></div> */}
+          <div className="leftback"></div>
           <div className="revolutionLeft">
             <h3 className="newRevolution">
-              A new revolution in music & world of NFTS...
+              A new revolution in music & world <br /> of NFTS...
             </h3>
             <p className="nftDetail">
               Music NFTs are changing the way fans connect with their favorite
@@ -19,13 +22,17 @@ export const NewRevolution = () => {
               and the appetite for change in an industry that so often
               underserves independent makers is clear.
             </p>
-            <Button className="revolutionButton">
+            <Button
+              className="revolutionButton"
+              onClick={() => navigate("/market-place")}
+            >
               WANT TO BECOME A CREATOR ?
             </Button>
           </div>
         </Col>
         <Col lg="6">
           <div className="revolutionRight">
+            <div className="right-back"></div>
             <div className="revolutionCard">
               <div className="cardImage">
                 <div className="play-button">

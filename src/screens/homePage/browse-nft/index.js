@@ -11,13 +11,18 @@ const BrowseNFT = () => {
         <span className="topSellers">Browse all </span>
         <span className="sellersYear">NFT's</span>
         <img src="/images/sellers-dropdown.svg" />
+        <div className="browse-nft-content">
+          <p className="sellersYears">2020</p>
+          <p className="sellersYears">2019</p>
+          <p className="sellersYears">2028</p>
+        </div>
       </div>
       <p className="sellExtraordinary">
         Discover, collect, and sell extraordinary NFTs
       </p>
-      <div className="BrowseCardWrapper">
+      <div className="BrowseCardWrapper col-12">
         {[...Array(8)].map((i) => (
-          <div className="cardWrap col-lg-3">
+          <div className="cardWrap col-lg-3 col-md-4 col-sm-6">
             <BrowseCard />
           </div>
         ))}

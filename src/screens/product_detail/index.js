@@ -5,6 +5,8 @@ import BrowseCard from "../../components/browse-nft-card";
 import Page from "../../components/page";
 
 import "./style.scss";
+import { useNavigate } from "react-router-dom";
+import { Chart } from "./chart";
 
 const data = ["All", "Music", "Sound", "Elect.", "Jazz", "Rock"];
 const detail = [
@@ -17,6 +19,8 @@ const detail = [
   },
 ];
 const ProductDetail = () => {
+  const navigate = useNavigate();
+
   const [isSelected, setIsSelected] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [newestIsOpen, setNewestIsOpen] = useState(false);
@@ -99,7 +103,12 @@ const ProductDetail = () => {
                       </div>
                     </div>
 
-                    <button className="placebid-buton">PLACE BID</button>
+                    <button
+                      className="placebid-buton"
+                      onClick={() => navigate("/cover-page")}
+                    >
+                      PLACE BID
+                    </button>
                   </div>
                   <div className="detail-bottom-block">
                     <p>OFFERS</p>
@@ -157,7 +166,7 @@ const ProductDetail = () => {
                     <p>HISTORY</p>
                   </div>
                   <div className="history-graph">
-                    <img src="/images/detail-graph.svg" />
+                    <Chart />{" "}
                   </div>
                 </div>
               </Col>
@@ -173,7 +182,7 @@ const ProductDetail = () => {
           </div>
           <div className="nft-market-cards">
             {[...Array(4)].map((i) => (
-              <div className="col-lg-3 col-md-4 col-sm-6">
+              <div className="detail-card-prod col-lg-3 col-md-4 col-sm-6">
                 <BrowseCard />
               </div>
             ))}

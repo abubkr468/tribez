@@ -23,8 +23,6 @@ export const Header = () => {
         <ul className="rightNav me-auto">
           <li className="navLinkBuy">Buy</li>
           <li className="navLinkBuy">Explore</li>
-          <li className="navLinkAuth">Sign Up</li>
-          <li className="navLinkAuth">Login</li>
           <div className="dropdown-wallet">
             <div className="wallet">
               <img src="/images/wallet.svg" />

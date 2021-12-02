@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Row, Col } from "reactstrap";
+import { Row, Col } from "reactstrap";
 import {
   Dropdown,
   DropdownToggle,
@@ -110,11 +110,7 @@ const CoverPage = () => {
                     </DropdownMenu>
                   </Dropdown>
                   <Dropdown isOpen={newestIsOpen} toggle={newestToggler}>
-                    <DropdownToggle
-                      className=""
-                      caret
-                      className="newest-button shadow-none"
-                    >
+                    <DropdownToggle caret className="newest-button shadow-none">
                       <img src="/images/newest.svg" />
                       Newest
                     </DropdownToggle>
@@ -128,7 +124,7 @@ const CoverPage = () => {
               </div>
               <div className="cover-card-parent">
                 {[...Array(8)].map((i) => (
-                  <div className="mb-5">
+                  <div className="cover-page-card mb-2 col-lg-3 col-md-4 col-sm-6">
                     <BrowseCard />
                   </div>
                 ))}

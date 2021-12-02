@@ -17,14 +17,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+    margin-top: 20px;
     .market-wrapper {
-      max-width: 425px;
-
       display: flex;
       flex-direction: row;
       align-items: center;
-      margin-top: 20px;
+      margin-top: 0px !important;
       column-gap: 20px;
 
       .market-list {
@@ -58,7 +57,7 @@
     .nft-filter {
       display: flex;
       flex-direction: row;
-      // justify-content: flex-end;
+      justify-content: flex-end;
       align-items: center;
       column-gap: 20px;
       .filter-button {
@@ -129,22 +128,32 @@
       padding: 10px 25px 10px 25px;
     }
   }
+  .mobile-menu-footer {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 425px) {
   .nft-market-wrapper {
+    .nft-heading {
+      padding: 10px;
+      line-height: 10px;
+    }
+    .nft-sub-heading {
+      padding: 10px;
+      line-height: 10px;
+    }
     .nft-all-market {
       display: flex;
       flex-direction: column;
-      // justify-content: space-between;
-      // align-items: center;
+      margin-top: -15px;
       .market-wrapper {
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin-top: 20px;
+        margin-top: 0px;
         column-gap: 10px;
-
+        padding-left: 10px;
         .market-list {
           list-style-type: none;
           font-family: "Roboto";
@@ -176,9 +185,10 @@
       .nft-filter {
         display: flex;
         flex-direction: row;
-        // justify-content: flex-start;
         align-items: center;
         column-gap: 20px;
+        margin-top: 20px;
+
         .filter-button {
           display: flex;
           flex-direction: row;
@@ -216,12 +226,17 @@
       }
     }
     .nft-market-cards {
-      margin-top: 20px;
       display: flex;
       flex-direction: row;
+      justify-content: space-between;
       flex-wrap: wrap;
+      margin-top: 20px;
       .card-nft {
+        width: 50%;
       }
     }
+  }
+  .mobile-menu-footer {
+    display: block;
   }
 }

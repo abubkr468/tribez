@@ -16,7 +16,7 @@ const SellersCard = ({ count }) => {
             <img src="/images/ethereum.svg" />
             <p className="count">19.5</p>
           </div>
-          <p className="price">$ 700,265</p>
+          <p className="price">+700,265</p>
         </div>
       </div>
     </div>

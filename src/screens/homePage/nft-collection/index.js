@@ -16,7 +16,7 @@ const NFTCollection = () => {
       items: 4,
     },
     tablet: {
-      breakpoint: { max: 1440, min: 464 },
+      breakpoint: { max: 139, min: 464 },
       items: 3,
     },
     largeMobile: {

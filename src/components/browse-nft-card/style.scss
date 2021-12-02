@@ -1,5 +1,8 @@
 .card-wrap {
-  border-radius: 10px !important;
+  background: #f8f8f8 !important;
+  border: 0.5px solid rgba(0, 0, 0, 0.5) !important;
+  box-sizing: border-box !important;
+  border-radius: 12px !important;
   .card-img-wrapp {
     position: relative;
     .card-play-button {
@@ -99,6 +102,84 @@
       }
       > img {
         cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card-wrap {
+    .card-img-wrapp {
+      position: relative;
+      .card-play-button {
+        position: absolute;
+        right: 10px;
+        bottom: 15px;
+        cursor: pointer;
+        > img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+    .browseCardBottom {
+      .cardDetail {
+        .cardLeft {
+          .theWeekend {
+            margin: 0px;
+            font-size: 10px;
+            line-height: 18px;
+            margin-bottom: 5px;
+            font-weight: 500;
+            font-family: "Roboto";
+          }
+          .walkerWrapper {
+            display: none;
+          }
+        }
+        .cardRight {
+          .etheriumWrapper {
+            display: flex;
+            flex-direction: row;
+            color: black;
+            align-items: center;
+            margin-bottom: 5px;
+
+            > img {
+              width: 9px;
+              height: 12px;
+              margin-right: 2px;
+            }
+            .count {
+              margin: 0px;
+              font-size: 12px;
+              font-weight: 700;
+              font-family: "Roboto";
+              margin-right: 0px;
+            }
+          }
+          .price {
+            display: none;
+          }
+        }
+      }
+      .buyNow {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 500;
+        margin-left: 5px;
+        margin-right: 5px;
+        font-family: "Roboto";
+        font-size: 12px;
+        > span {
+          color: #2081e2;
+          cursor: pointer;
+        }
+        > img {
+          cursor: pointer;
+        }
       }
     }
   }

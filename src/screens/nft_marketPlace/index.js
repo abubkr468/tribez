@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container } from "reactstrap";
 import BrowseCard from "../../components/browse-nft-card";
-
+import Footer from "../../components/footer";
 import {
   Dropdown,
   DropdownToggle,
@@ -19,6 +19,7 @@ const NFTMarketPlace = () => {
   const [isSelected, setIsSelected] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [newestIsOpen, setNewestIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const toggleHandler = () => {
     setIsOpen(!isOpen);
@@ -85,8 +86,8 @@ const NFTMarketPlace = () => {
           </Row>
           {/* </div> */}
 
-          <div className="nft-market-cards col-12">
-            {[...Array(16)].map((i) => (
+          <div className="nft-market-cards">
+            {[...Array(16)].splice(0, 16).map((i) => (
               <div className="card-nft col-lg-3 col-md-4 col-sm-6">
                 <BrowseCard />
               </div>
@@ -96,6 +97,9 @@ const NFTMarketPlace = () => {
             <button className="nft-market-button">Show More</button>
           </div>
         </Container>
+        <div className="mobile-menu-footer">
+          <Footer />
+        </div>
       </div>
     </Page>
   );

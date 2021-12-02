@@ -159,6 +159,7 @@
   .footerWrapper {
     .footer {
       .footerHeading {
+        width: 75%;
         font-family: "Roboto";
         font-size: 34px;
         font-style: normal;
@@ -199,9 +200,10 @@
         font-weight: 400;
         padding-top: 10px;
         > Input {
-          width: 27px;
+          width: 35px;
           height: 27px;
           border-radius: 5px;
+          margin-right: 5px;
         }
         > Label {
           margin: 0px;
@@ -242,6 +244,7 @@
       }
     }
     .footerBottom {
+      height: 40px;
       position: absolute;
       width: 97%;
       display: flex;

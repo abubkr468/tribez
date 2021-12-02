@@ -34,12 +34,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-top: 20px;
     .market-wrapper {
       max-width: 425px;
       display: flex;
       flex-direction: row;
       align-items: center;
-      margin-top: 20px;
       column-gap: 20px;
 
       .market-list {
@@ -66,47 +66,6 @@
         padding: 5px 15px 5px 15px;
         border-radius: 20px;
         cursor: pointer;
-      }
-    }
-    .nft-filter {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      align-items: center;
-      column-gap: 20px;
-      .filter-button {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        border: none;
-        background-color: white;
-        color: black;
-        font-family: "Roboto";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 400;
-
-        > img {
-          margin-right: 5px;
-        }
-      }
-      .newest-button {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        border: none;
-        background-color: white;
-        color: black;
-        font-family: "Roboto";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 400;
-
-        > img {
-          margin-right: 5px;
-        }
       }
     }
   }
@@ -339,6 +298,8 @@
       }
     }
     .description {
+      height: 35vh;
+
       border: 0.5px solid rgba(0, 0, 0, 0.2);
       box-sizing: border-box;
       border-radius: 10px;
@@ -363,12 +324,15 @@
         }
       }
       .history-graph {
-        height: 100%;
-        padding: 65px;
+        padding: 40px;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        > canvas {
+          width: 400px !important;
+          height: 200px !important;
+        }
       }
       > p {
         color: rgba(0, 0, 0, 0.65);
@@ -412,13 +376,9 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    column-gap: 65px;
-    row-gap: 65px;
-
-    // margin-top: 20px;
-    // display: grid;
-    // grid-template-columns: auto auto auto auto;
-    // grid-gap: 50px;
+    .detail-card-prod {
+      padding: 10px;
+    }
   }
   .nft-market-button-wrapper {
     display: flex;
@@ -724,9 +684,11 @@
       margin-top: 20px;
       display: flex;
       flex-direction: row;
+      justify-content: center;
       flex-wrap: wrap;
-      // column-gap: 65px;
-      // row-gap: 65px;
+      .detail-card-prod {
+        width: 50%;
+      }
     }
     .nft-market-button-wrapper {
       display: flex;

@@ -16,6 +16,26 @@
       font-size: 36px;
       margin-left: 10px;
     }
+
+    .browse-nft-content {
+      display: none;
+    }
+    > img:hover .browse-nft-content {
+      display: block;
+      width: 80px;
+      position: absolute;
+      text-align: center;
+      color: #fff;
+      padding: 10px 15px 10px 15px;
+      z-index: 1111;
+      background-color: white;
+      color: black;
+      margin-top: 50px;
+      box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.15);
+      > p {
+        cursor: pointer;
+      }
+    }
   }
   .sellExtraordinary {
     font-family: "Roboto";
@@ -30,7 +50,7 @@
     flex-wrap: wrap;
     margin-top: 50px;
     .cardWrap {
-      padding: 20px;
+      padding: 10px;
       margin-bottom: 20px;
     }
   }
@@ -62,6 +82,7 @@
 
 @media only screen and (max-width: 425px) {
   .topCollectionWrapper {
+    margin-top: 15px;
     .sellersHeading {
       display: flex;
       flex-direction: row;
@@ -77,13 +98,11 @@
     .BrowseCardWrapper {
       display: flex;
       flex-direction: row;
-      justify-content: center;
       flex-wrap: wrap;
       margin-top: 50px;
-      margin-left: 60px;
       .cardWrap {
-        flex: 1;
-        margin-bottom: 40px;
+        width: 50%;
+        margin-bottom: 20px;
       }
     }
     .browseButton {
