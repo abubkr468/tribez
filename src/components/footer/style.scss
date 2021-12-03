@@ -35,9 +35,9 @@
       padding-top: 10px;
     }
     .inputGroup {
-      width: 40% !important;
+      width: 37% !important;
       height: 54px;
-      border-radius: 20px !important;
+      border-radius: 8px !important;
       margin-top: 10px;
       border: none !important;
       .footer-input {
@@ -66,7 +66,7 @@
       line-height: 17px;
       letter-spacing: 0em;
       text-align: center;
-      margin-top: 20px;
+      margin-top: 40px;
     }
     .community {
       font-family: "Roboto";
@@ -180,6 +180,7 @@
       .footerHeading {
         width: 75%;
         font-family: "Roboto";
+        font-weight: 500;
         font-size: 34px;
         font-style: normal;
       }
@@ -188,39 +189,39 @@
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
+        width: 65%;
+        color: rgba(0, 0, 0, 0.85);
       }
       .inputGroup {
         width: 80% !important;
         height: 44px;
-        border-radius: 20px !important;
+        border-radius: 8px !important;
         margin-top: 10px;
       }
 
       .privacyPolicy {
         width: 80%;
         font-family: "Roboto";
-        font-size: 15px;
+        font-size: 13px;
         font-style: normal;
-        font-weight: 400;
-        line-height: 17px;
-        letter-spacing: 0em;
+        font-weight: 500;
         text-align: center;
         margin-top: 20px;
       }
       .checkCont {
-        width: 85%;
+        width: 75%;
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        font-family: Roboto;
-        font-size: 14px;
+        // justify-content: space-evenly;
+        align-items: flex-start;
+        font-family: "Roboto";
+        font-size: 11px;
         font-style: normal;
         font-weight: 400;
         padding-top: 10px;
         > Input {
-          width: 27px;
-          height: 27px;
+          width: 17px;
+          height: 17px;
           border-radius: 5px;
         }
         > Label {

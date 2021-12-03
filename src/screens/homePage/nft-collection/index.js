@@ -43,7 +43,7 @@ const NFTCollection = () => {
           showDots={true}
           dotListClass="dotClass"
           slidesToSlide={1}
-          autoPlay={true}
+          autoPlay={false}
           renderButtonGroupOutside={true}
           ssr={true}
           infinite={true}

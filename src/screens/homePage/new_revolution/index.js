@@ -3,6 +3,7 @@ import { Button } from "react-bootstrap";
 import { Row, Col } from "reactstrap";
 import "./style.scss";
 import { useNavigate } from "react-router-dom";
+import RevolutionCard from "../../../components/revolution-card";
 
 export const NewRevolution = () => {
   const navigate = useNavigate();
@@ -16,6 +17,10 @@ export const NewRevolution = () => {
             <h3 className="newRevolution">
               A new revolution in music & world <br /> of NFTS...
             </h3>
+            <div className="revolutionRightLeft">
+              <div className="right-back"></div>
+              <RevolutionCard />
+            </div>
             <p className="nftDetail">
               Music NFTs are changing the way fans connect with their favorite
               artists. All kinds of creators are innovating on the blockchain,
@@ -30,33 +35,7 @@ export const NewRevolution = () => {
         <Col lg="6">
           <div className="revolutionRight">
             <div className="right-back"></div>
-            <div className="revolutionCard">
-              <div className="cardImage">
-                <div className="play-button">
-                  <img src="/images/play-btn.svg" alt="img" />
-                </div>
-              </div>
-              <div className="cardBottom">
-                <div className="cardDetail">
-                  <div className="cardLeft">
-                    <p className="theWeekend">theWeeknd x Ariana G.</p>
-                    <div className="walkerWrapper">
-                      <span className="by">by</span>
-                      <span className="walkerMusic">alanwalkermusic</span>
-                      <img src="/images/tick.svg" />
-                    </div>
-                  </div>
-                  <div className="cardRight">
-                    <div className="etheriumWrapper">
-                      <img src="/images/ethereum.svg" />
-                      <p className="count">19.5</p>
-                    </div>
-                    <p className="price">$ 700,265</p>
-                  </div>
-                </div>
-                <div className="buyNow">BUY NOW</div>
-              </div>
-            </div>
+            <RevolutionCard />
           </div>
         </Col>
       </Row>

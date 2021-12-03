@@ -24,6 +24,7 @@
     .itemClass {
     }
     .dotClass {
+      column-gap: 15px;
       .react-multi-carousel-dot button {
         background-color: rgba(255, 158, 136, 0.25);
         border: none;
@@ -34,15 +35,18 @@
       }
     }
     .react-multiple-carousel__arrow--left {
-      background-color: #645959;
+      background-color: #f2f2f2;
       color: darkblue;
       position: absolute;
       left: 10px;
     }
     .react-multiple-carousel__arrow--right {
-      background-color: #645959;
+      background-color: #f2f2f2;
       position: absolute;
       right: 30px;
+    }
+    .react-multiple-carousel__arrow::before {
+      color: #a4a4a4;
     }
   }
 }
@@ -62,16 +66,17 @@
 @media only screen and (max-width: 425px) {
   .nftCollectionWrapper {
     margin-top: 10%;
+    background-color: white;
     .collectionNFT {
-      font-family: Gilroy;
-      font-size: 32px;
+      font-family: "Gilroy-Bold", sans-serif;
+      font-size: 26px;
       font-style: normal;
       font-weight: 800;
       text-align: center;
     }
     .discoverNFT {
-      font-family: Roboto;
-      font-size: 16px;
+      font-family: "Roboto";
+      font-size: 15px;
       font-style: normal;
       font-weight: 400;
       text-align: center;

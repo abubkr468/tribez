@@ -18,7 +18,7 @@
       cursor: pointer;
       .sellersYear {
         color: rgba(255, 127, 98, 1);
-        font-family: "Gilroy-Bold" !important;
+        font-family: "Gilroy-Bold", sans-serif;
         font-weight: 800;
         font-size: 36px;
         margin-left: 10px;
@@ -58,12 +58,10 @@
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
-    margin-top: 50px;
-    margin-left: 50px;
+    margin: 50px 25px 0 25px;
     .cardWrapper {
-      // flex: 1;
-      padding: 20px;
-      margin-bottom: 20px;
+      padding: 10px;
+      margin-bottom: 10px;
     }
   }
 }
@@ -91,14 +89,56 @@
     .sellersHeading {
       display: flex;
       flex-direction: row;
+      justify-content: center;
       align-items: center;
+      .topSellers {
+        font-family: "Gilroy-Bold", sans-serif;
+        font-weight: 800;
+        font-size: 26px;
+      }
+      .sellersDropdown {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        column-gap: 5px;
+        cursor: pointer;
+        .sellersYear {
+          color: rgba(255, 127, 98, 1);
+          font-family: "Gilroy-Bold" !important;
+          font-weight: 800;
+          font-size: 26px;
+          margin-left: 10px;
+        }
+        .sellers-content {
+          display: none;
+        }
+      }
+      .sellersDropdown:hover .sellers-content {
+        display: block;
+        width: 80px;
+        position: absolute;
+        text-align: center;
+        color: #fff;
+        padding: 10px 0 0 0;
+        z-index: 1111;
+        background-color: white;
+        color: black;
+        margin-top: 50px;
+        box-shadow: 0px 1px 6px 1px rgba(0, 0, 0, 0.15);
+        > p {
+          cursor: pointer;
+        }
+        > p:hover {
+          background-color: #f2f2f2;
+        }
+      }
     }
     .sellExtraordinary {
+      text-align: center;
       font-family: "Roboto";
       font-weight: 400;
-      font-size: 16px;
+      font-size: 15px;
       margin: 0px;
-      text-align: center;
     }
     .sellersCardWrapper {
       display: flex;
@@ -108,8 +148,8 @@
       margin-top: 50px;
       margin-left: 50px;
       .cardWrapper {
-        flex: 1;
-        margin-bottom: 20px;
+        // flex: 1;
+        margin-bottom: 10px;
         margin-right: 50px;
       }
     }

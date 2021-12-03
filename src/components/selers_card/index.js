@@ -14,9 +14,9 @@ const SellersCard = ({ count }) => {
         <div className="sellersRight">
           <div className="etheriumWrapper">
             <img src="/images/ethereum.svg" />
-            <p className="count">19.5</p>
+            <p className="count">465</p>
           </div>
-          <p className="price">+700,265</p>
+          <p className="price">+12.562</p>
         </div>
       </div>
     </div>

@@ -29,9 +29,9 @@ const BrowseNFT = () => {
       <p className="sellExtraordinary">
         Discover, collect, and sell extraordinary NFTs
       </p>
-      <div className="BrowseCardWrapper col-12">
+      <div className="BrowseCardWrapper">
         {[...Array(8)].map((i, index) => (
-          <div className="cardWrap col-lg-3 col-md-4 col-sm-6">
+          <div className="cardWrap col-lg-3 col-md-4 col-sm-12">
             <BrowseCard images={images[index]} />
           </div>
         ))}
