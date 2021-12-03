@@ -3,7 +3,16 @@ import { Button } from "reactstrap";
 import BrowseCard from "../../../components/browse-nft-card";
 
 import "./style.scss";
-
+const images = [
+  "/browse-nft/browse-nft-1.png",
+  "/browse-nft/browse-nft-2.png",
+  "/browse-nft/browse-nft-3.png",
+  "/browse-nft/browse-nft-4.png",
+  "/browse-nft/browse-nft-5.png",
+  "/browse-nft/browse-nft-6.png",
+  "/browse-nft/browse-nft-7.png",
+  "/browse-nft/browse-nft-8.png",
+];
 const BrowseNFT = () => {
   return (
     <div className="topCollectionWrapper">
@@ -21,9 +30,9 @@ const BrowseNFT = () => {
         Discover, collect, and sell extraordinary NFTs
       </p>
       <div className="BrowseCardWrapper col-12">
-        {[...Array(8)].map((i) => (
+        {[...Array(8)].map((i, index) => (
           <div className="cardWrap col-lg-3 col-md-4 col-sm-6">
-            <BrowseCard />
+            <BrowseCard images={images[index]} />
           </div>
         ))}
       </div>

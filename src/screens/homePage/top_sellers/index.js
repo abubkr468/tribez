@@ -22,7 +22,7 @@ const TopArtists = () => {
       </p>
       <div className="sellersCardWrapper">
         {[...Array(12)].map((i, index) => (
-          <div className="cardWrapper">
+          <div className="cardWrapper col-lg-4 col-md-6 col-sm-12">
             <SellersCard count={index + 1} />
           </div>
         ))}

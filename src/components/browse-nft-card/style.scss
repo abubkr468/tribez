@@ -5,6 +5,8 @@
   border-radius: 12px !important;
   .card-img-wrapp {
     position: relative;
+    .card-imag {
+    }
     .card-play-button {
       position: absolute;
       right: 10px;
@@ -12,96 +14,105 @@
       cursor: pointer;
     }
   }
-  .browseCardBottom {
-    .cardDetail {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 0px !important;
-      .cardLeft {
-        .theWeekend {
-          margin: 0px;
-          font-size: 16px;
-          line-height: 18px;
-          margin-bottom: 5px;
-          font-weight: 500;
-          font-family: "Roboto";
-        }
-        .walkerWrapper {
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-start;
-          align-items: center;
+  .card-body-cont {
+    padding: 0px;
+    .browseCardBottom {
+      padding: 10px 15px 10px 15px;
+      .cardDetail {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 0px !important;
+        .cardLeft {
+          width: 70%;
 
-          .by {
-            font-size: 11px;
-            font-weight: 300;
-            color: #8480a0;
+          .theWeekend {
+            margin: 0px;
+            font-size: 16px;
+            line-height: 18px;
+            margin-bottom: 5px;
+            font-weight: 500;
             font-family: "Roboto";
           }
-          .walkerMusic {
+          .walkerWrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+            .by {
+              font-size: 11px;
+              font-weight: 300;
+              color: #8480a0;
+              font-family: "Roboto";
+            }
+            .walkerMusic {
+              font-size: 12px;
+              font-weight: 500;
+              margin-left: 5px;
+              text-decoration: underline;
+              font-family: "Roboto";
+            }
+            > img {
+              margin-left: 5px;
+              width: 11px;
+              height: 11px;
+            }
+          }
+        }
+        .cardRight {
+          text-align: end;
+          width: 30%;
+          .etheriumWrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            color: black;
+            align-items: center;
+            margin-bottom: 10px;
+
+            > img {
+              width: 9px;
+              height: 16px;
+              margin-right: 10px;
+            }
+            .count {
+              margin: 0px;
+              font-size: 19px;
+              font-weight: 700;
+              font-family: "Roboto";
+              margin-right: 0px;
+            }
+          }
+
+          .price {
+            margin: 0px;
             font-size: 12px;
             font-weight: 500;
-            margin-left: 5px;
-            text-decoration: underline;
+            font-style: normal;
             font-family: "Roboto";
           }
-          > img {
-            margin-left: 5px;
-            width: 11px;
-            height: 11px;
-          }
         }
       }
-      .cardRight {
-        text-align: end;
-        .etheriumWrapper {
-          display: flex;
-          flex-direction: row;
-          color: black;
-          align-items: center;
-          margin-bottom: 5px;
+      .buyNow {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 500;
+        margin-left: 5px;
+        margin-right: 5px;
+        font-family: "Roboto";
+        font-size: 16px;
 
-          > img {
-            width: 9px;
-            height: 16px;
-            margin-right: 10px;
-          }
-          .count {
-            margin: 0px;
-            font-size: 19px;
-            font-weight: 700;
-            font-family: "Roboto";
-            margin-right: 0px;
-          }
+        > span {
+          color: #2081e2;
+          cursor: pointer;
         }
-
-        .price {
-          margin: 0px;
-          font-size: 12px;
-          font-weight: 500;
-          font-style: normal;
-          font-family: "Roboto";
+        > img {
+          cursor: pointer;
         }
-      }
-    }
-    .buyNow {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      font-weight: 500;
-      margin-left: 5px;
-      margin-right: 5px;
-      font-family: "Roboto";
-      font-size: 16px;
-      > span {
-        color: #2081e2;
-        cursor: pointer;
-      }
-      > img {
-        cursor: pointer;
       }
     }
   }

@@ -18,9 +18,16 @@ const detail = [
     from: "zeeshui.ux",
   },
 ];
+
+const images = [
+  "/browse-nft/browse-nft-1.png",
+  "/browse-nft/browse-nft-2.png",
+  "/browse-nft/browse-nft-3.png",
+  "/browse-nft/browse-nft-4.png",
+];
+
 const ProductDetail = () => {
   const navigate = useNavigate();
-
   const [isSelected, setIsSelected] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [newestIsOpen, setNewestIsOpen] = useState(false);
@@ -84,12 +91,12 @@ const ProductDetail = () => {
                       </span>
                       <img src="/images/tick.svg" />
                     </div>
+                  </div>
+                  <div className="detail-mid-block">
                     <div className="detail-third-heading">
                       <p>Current Bid</p>
                       <p>Auction Ends in</p>
                     </div>
-                  </div>
-                  <div className="detail-mid-block">
                     <div className="detail-mid-top">
                       <div className="detail-mid-left">
                         <img src="/images/ethereum.svg" />
@@ -102,16 +109,14 @@ const ProductDetail = () => {
                         </p>
                       </div>
                     </div>
-
-                    <button
-                      className="placebid-buton"
-                      onClick={() => navigate("/cover-page")}
-                    >
-                      PLACE BID
-                    </button>
+                    <div className="placebid-button-wrap">
+                      <button className="placebid-button">PLACE BID</button>
+                    </div>
                   </div>
                   <div className="detail-bottom-block">
-                    <p>OFFERS</p>
+                    <div className="offers-wrap">
+                      <p>OFFERS</p>
+                    </div>
                     <table width="100%" className="table-detail">
                       <tr className="table-heading">
                         <td className="price">Price</td>
@@ -181,9 +186,9 @@ const ProductDetail = () => {
             </p>
           </div>
           <div className="nft-market-cards">
-            {[...Array(4)].map((i) => (
+            {[...Array(4)].map((i, index) => (
               <div className="detail-card-prod col-lg-3 col-md-4 col-sm-6">
-                <BrowseCard />
+                <BrowseCard images={images[index]} />
               </div>
             ))}
           </div>

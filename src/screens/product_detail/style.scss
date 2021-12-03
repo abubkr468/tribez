@@ -71,17 +71,20 @@
   }
   .product-detail-wrapper {
     margin-top: 20px;
+    height: 100%;
+    row-gap: 20px;
     .video {
       width: 100%;
-      min-height: 660px;
-      background-image: url("../../bg/browse-card.svg");
+      height: 700px;
+      background-image: url("../../bg/detail-video-img.png");
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: center;
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      border-radius: 10px;
+
       .detail-play-button {
         width: 94px;
         height: 94px;
@@ -99,13 +102,12 @@
       }
     }
     .detail-wrapper {
-      height: 660px;
+      height: 700px;
       border: 0.5px solid rgba(0, 0, 0, 0.2);
       box-sizing: border-box;
       border-radius: 10px;
       padding: 10px 25px 1px 25px;
       .detail-top {
-        border-bottom: 0.5px solid rgba(0, 0, 0, 0.25);
         .detail-top-heading {
           display: flex;
           flex-direction: row;
@@ -144,12 +146,20 @@
             height: 16px;
           }
         }
+      }
+
+      .detail-mid-block {
+        background: #f7f7f7;
+        border-radius: 10px;
+        margin-top: 15px;
         .detail-third-heading {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
-          margin: 20px 30px 0px 30px;
+          padding: 10px 50px 0px 50px;
+          border-bottom: 0.5px solid rgba(0, 0, 0, 0.25);
+
           > p {
             font-family: "Roboto";
             font-size: 16px;
@@ -157,14 +167,13 @@
             font-weight: 400;
           }
         }
-      }
-      .detail-mid-block {
-        padding: 20px 20px 40px 20px;
         .detail-mid-top {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
+          padding: 20px 40px 0px 30px;
+
           .detail-mid-left {
             display: flex;
             flex-direction: row;
@@ -204,33 +213,45 @@
             }
           }
         }
-        .placebid-buton {
-          width: 100%;
-          border: none;
-          margin-top: 20px;
-          background: linear-gradient(
-            94.05deg,
-            #f68fe0 0.97%,
-            #fab9ab 40.39%,
-            #fccb94 76.52%,
-            #ffde7e 106.09%
-          );
-          border-radius: 10px;
-          font-family: "Roboto";
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 500;
-          padding: 10px;
+        .placebid-button-wrap {
+          padding: 0px 30px 20px 30px;
+          .placebid-button {
+            width: 100%;
+            border: none;
+            margin-top: 20px;
+            background: linear-gradient(
+              94.05deg,
+              #f68fe0 0.97%,
+              #fab9ab 40.39%,
+              #fccb94 76.52%,
+              #ffde7e 106.09%
+            );
+            border-radius: 10px;
+            font-family: "Roboto";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            padding: 10px;
+          }
         }
       }
       .detail-bottom-block {
-        > p {
-          font-family: "Roboto";
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 400;
-          margin: 0px;
+        background: #f7f7f7;
+        border-radius: 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        .offers-wrap {
+          padding: 10px 0 10px 20px;
+
+          > p {
+            font-family: "Roboto";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            margin: 0px;
+          }
         }
+
         .table-detail {
           .table-heading {
             height: 40px;
@@ -240,15 +261,17 @@
             font-style: normal;
             font-weight: 400;
             color: rgba(0, 0, 0, 0.45);
-            border-top: 0.5px solid rgba(0, 0, 0, 0.5);
+            border-top: 0.5px solid rgba(0, 0, 0, 0.3);
             .price {
               text-align: left;
+              padding-left: 15px;
             }
           }
           .table-rows {
             height: 40px;
             border-top: 0.5px solid rgba(0, 0, 0, 0.25);
             .img-price {
+              padding-left: 15px;
               .eth-price {
                 margin-left: 10px;
                 font-family: "Roboto";
@@ -338,7 +361,8 @@
         color: rgba(0, 0, 0, 0.65);
         padding: 35px;
         font-family: "Roboto";
-        font-size: 16px;
+        font-size: 0.83vw;
+        font-size: 1.7vh;
         font-style: normal;
         font-weight: 400;
       }
@@ -380,29 +404,6 @@
       padding: 10px;
     }
   }
-  .nft-market-button-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 40px 0px 40px 0px;
-
-    .nft-market-button {
-      border: none;
-      background: linear-gradient(
-        94.05deg,
-        #f68fe0 0.97%,
-        #fab9ab 40.39%,
-        #fccb94 76.52%,
-        #ffde7e 106.09%
-      );
-      border-radius: 40px;
-      font-family: "Roboto";
-      font-size: 15px;
-      font-style: normal;
-      font-weight: 500;
-      padding: 10px 25px 10px 25px;
-    }
-  }
 }
 
 @media screen and (max-width: 425px) {
@@ -419,7 +420,7 @@
       margin-top: 20px;
       .video {
         width: 100%;
-        min-height: 650px;
+        height: 400px;
         background-image: url("../../bg/browse-card.svg");
         background-repeat: no-repeat;
         background-size: cover;
@@ -446,13 +447,13 @@
       }
       .detail-wrapper {
         margin-top: 20px;
-        height: 650px;
+
+        height: 100%;
         border: 0.5px solid rgba(0, 0, 0, 0.2);
         box-sizing: border-box;
         border-radius: 10px;
         padding: 10px 25px 1px 25px;
         .detail-top {
-          border-bottom: 0.5px solid rgba(0, 0, 0, 0.25);
           .detail-top-heading {
             display: flex;
             flex-direction: row;
@@ -460,9 +461,10 @@
             align-items: center;
             > p {
               font-family: "Roboto";
-              font-size: 24px;
+              font-size: 20px;
               font-style: normal;
               font-weight: 500;
+              margin: 0px;
             }
             > img {
               cursor: pointer;
@@ -482,7 +484,7 @@
             }
             .detail-heading-alanwalk {
               font-family: "Roboto";
-              font-size: 16px;
+              font-size: 15px;
               font-style: normal;
               font-weight: 500;
             }
@@ -506,12 +508,31 @@
           }
         }
         .detail-mid-block {
-          padding: 20px 20px 40px 20px;
+          background: #f7f7f7;
+          border-radius: 10px;
+          margin-top: 15px;
+          .detail-third-heading {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px 0px 50px;
+            border-bottom: 0.5px solid rgba(0, 0, 0, 0.25);
+
+            > p {
+              font-family: "Roboto";
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+            }
+          }
           .detail-mid-top {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            padding: 20px 40px 0px 30px;
+
             .detail-mid-left {
               display: flex;
               flex-direction: row;
@@ -519,7 +540,7 @@
               align-items: center;
               .detail-eth-price {
                 font-family: "Roboto";
-                font-size: 26px;
+                font-size: 20px;
                 font-style: normal;
                 font-weight: 500;
               }
@@ -536,7 +557,7 @@
               align-items: flex-end;
               > p {
                 font-family: "Roboto";
-                font-size: 26px;
+                font-size: 20px;
                 font-style: normal;
                 font-weight: 500;
                 margin: 0px;
@@ -551,23 +572,26 @@
               }
             }
           }
-          .placebid-buton {
-            width: 100%;
-            border: none;
-            margin-top: 20px;
-            background: linear-gradient(
-              94.05deg,
-              #f68fe0 0.97%,
-              #fab9ab 40.39%,
-              #fccb94 76.52%,
-              #ffde7e 106.09%
-            );
-            border-radius: 10px;
-            font-family: "Roboto";
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            padding: 10px;
+          .placebid-button-wrap {
+            padding: 0px 30px 20px 30px;
+            .placebid-button {
+              width: 100%;
+              border: none;
+              margin-top: 20px;
+              background: linear-gradient(
+                94.05deg,
+                #f68fe0 0.97%,
+                #fab9ab 40.39%,
+                #fccb94 76.52%,
+                #ffde7e 106.09%
+              );
+              border-radius: 10px;
+              font-family: "Roboto";
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 500;
+              padding: 10px;
+            }
           }
         }
         .detail-bottom-block {
@@ -591,6 +615,9 @@
               .price {
                 text-align: left;
               }
+              .usd {
+                display: none;
+              }
             }
             .table-rows {
               height: 40px;
@@ -605,12 +632,7 @@
                 }
               }
               .price-usd {
-                text-align: center;
-                font-family: "Roboto";
-                font-size: 12px;
-                font-style: normal;
-                font-weight: 400;
-                color: rgba(0, 0, 0, 0.5);
+                display: none;
               }
               .expiration {
                 text-align: center;
@@ -645,16 +667,13 @@
         }
       }
       .description {
-        border: 0.5px solid rgba(0, 0, 0, 0.2);
-        box-sizing: border-box;
-        border-radius: 10px;
-        margin-top: 20px;
+        height: auto;
         .description-heading {
           display: flex;
           flex-direction: row;
           justify-content: flex-start;
           align-items: center;
-          padding: 15px 0px 15px 25px;
+          padding: 10px 0px 10px 20px;
           border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
           > img {
             margin-right: 20px;
@@ -669,10 +688,16 @@
           }
         }
         .history-graph {
+          padding: 20px;
           > img {
             width: 300px;
             height: 150px;
           }
+        }
+        > p {
+          padding: 20px;
+          font-size: 0.63vw;
+          font-size: 0.9vh;
         }
       }
     }

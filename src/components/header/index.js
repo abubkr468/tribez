@@ -1,12 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./style.scss";
+import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
+  const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth > 1000) {
+      setIsMobile(false);
+    }
+  }, [setIsMobile]);
+
   return (
     <nav className="navbarWrapper">
       <div class="logo-wrapper">
-        <img src="/images/nft-logo.svg" alt="img" />
+        <img
+          src="/images/nft-logo.svg"
+          alt="img"
+          onClick={() => navigate("/")}
+        />
         <span className="ml-5">|</span>
       </div>
       <div className={isMobile ? "navWrapperMobile" : "navWrapper"}>
@@ -23,47 +36,67 @@ export const Header = () => {
         <ul className="rightNav me-auto">
           <li className="navLinkBuy">Buy</li>
           <li className="navLinkBuy">Explore</li>
-          <div className="dropdown-wallet">
-            <div className="wallet">
-              <img src="/images/wallet.svg" />
-              <span className="walletText">Wallet</span>
-            </div>
-            <div className="wallet-content">
-              <div className="contents">
-                <img className="dropdown-icon" src="/images/wallet-icon.svg" />
-                <span className="wallet-name">zeeshui.ux</span>
-                <span className="wallet-gained"> just gained</span>
-                <span className="wallet-value"> 167.2 ETH</span>
+          <div className="wallet-wrapper">
+            <div className="dropdown-wallet">
+              <div className="wallet">
+                <img src="/images/wallet.svg" />
+                <span className="walletText">Wallet</span>
               </div>
-              <div className="contents">
-                <img className="dropdown-icon" src="/images/wallet-icon.svg" />
-                <span className="wallet-name">zeeshui.ux</span>
-                <span className="wallet-gained"> just gained</span>
-                <span className="wallet-value"> 167.2 ETH</span>
-              </div>
-              <div className="contents">
-                <img className="dropdown-icon" src="/images/wallet-icon.svg" />
-                <span className="wallet-name">zeeshui.ux</span>
-                <span className="wallet-gained"> just gained</span>
-                <span className="wallet-value"> 167.2 ETH</span>
-              </div>
-              <div className="contents">
-                <img className="dropdown-icon" src="/images/wallet-icon.svg" />
-                <span className="wallet-name">zeeshui.ux</span>
-                <span className="wallet-gained"> just gained</span>
-                <span className="wallet-value"> 167.2 ETH</span>
-              </div>
-              <div className="contents">
-                <img className="dropdown-icon" src="/images/wallet-icon.svg" />
-                <span className="wallet-name">zeeshui.ux</span>
-                <span className="wallet-gained"> just gained</span>
-                <span className="wallet-value"> 167.2 ETH</span>
-              </div>
-              <div className="contents">
-                <img className="dropdown-icon" src="/images/wallet-icon.svg" />
-                <span className="wallet-name">zeeshui.ux</span>
-                <span className="wallet-gained"> just gained</span>
-                <span className="wallet-value"> 167.2 ETH</span>
+              <div className="wallet-content">
+                <div className="contents">
+                  <img
+                    className="dropdown-icon"
+                    src="/images/wallet-icon.svg"
+                  />
+                  <span className="wallet-name">zeeshui.ux</span>
+                  <span className="wallet-gained"> just gained</span>
+                  <span className="wallet-value"> 167.2 ETH</span>
+                </div>
+                <div className="contents">
+                  <img
+                    className="dropdown-icon"
+                    src="/images/wallet-icon.svg"
+                  />
+                  <span className="wallet-name">zeeshui.ux</span>
+                  <span className="wallet-gained"> just gained</span>
+                  <span className="wallet-value"> 167.2 ETH</span>
+                </div>
+                <div className="contents">
+                  <img
+                    className="dropdown-icon"
+                    src="/images/wallet-icon.svg"
+                  />
+                  <span className="wallet-name">zeeshui.ux</span>
+                  <span className="wallet-gained"> just gained</span>
+                  <span className="wallet-value"> 167.2 ETH</span>
+                </div>
+                <div className="contents">
+                  <img
+                    className="dropdown-icon"
+                    src="/images/wallet-icon.svg"
+                  />
+                  <span className="wallet-name">zeeshui.ux</span>
+                  <span className="wallet-gained"> just gained</span>
+                  <span className="wallet-value"> 167.2 ETH</span>
+                </div>
+                <div className="contents">
+                  <img
+                    className="dropdown-icon"
+                    src="/images/wallet-icon.svg"
+                  />
+                  <span className="wallet-name">zeeshui.ux</span>
+                  <span className="wallet-gained"> just gained</span>
+                  <span className="wallet-value"> 167.2 ETH</span>
+                </div>
+                <div className="contents">
+                  <img
+                    className="dropdown-icon"
+                    src="/images/wallet-icon.svg"
+                  />
+                  <span className="wallet-name">zeeshui.ux</span>
+                  <span className="wallet-gained"> just gained</span>
+                  <span className="wallet-value"> 167.2 ETH</span>
+                </div>
               </div>
             </div>
           </div>
@@ -71,25 +104,28 @@ export const Header = () => {
           <div className="dropdown">
             <img className="profile" src="/images/profile.svg" />
             <div className="dropdown-content">
-              <div className="content">
+              <div className="content" onClick={() => navigate("/my-profile")}>
                 <img className="dropdown-icon" src="/images/profile-icon.svg" />
                 <span className="dropdown-name">My Profile</span>
               </div>
-              <div className="content">
+              <div className="content" onClick={() => navigate("/collections")}>
                 <img
                   className="dropdown-icon"
                   src="/images/collection-icon.svg"
                 />
                 <span className="dropdown-name">Collections</span>
               </div>
-              <div className="content">
+              <div className="content" onClick={() => navigate("/favourites")}>
                 <img
                   className="dropdown-icon"
                   src="/images/favourite-icon.svg"
                 />
                 <span className="dropdown-name">Favourites</span>
               </div>
-              <div className="content">
+              <div
+                className="content"
+                onClick={() => navigate("/user-settings")}
+              >
                 <img className="dropdown-icon" src="/images/setting-icon.svg" />
                 <span className="dropdown-name">Settings</span>
               </div>

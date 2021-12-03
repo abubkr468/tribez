@@ -2,7 +2,7 @@
   margin-top: 10%;
 
   .collectionNFT {
-    font-family: "Gilroy-Bold";
+    font-family: "Gilroy-Bold", sans-serif;
     font-size: 32px;
     font-style: normal;
     font-weight: 800;
@@ -24,17 +24,37 @@
     .itemClass {
     }
     .dotClass {
+      .react-multi-carousel-dot button {
+        background-color: rgba(255, 158, 136, 0.25);
+        border: none;
+      }
+      .react-multi-carousel-dot--active button {
+        background-color: rgba(255, 158, 136, 0.45);
+        border: none;
+      }
     }
     .react-multiple-carousel__arrow--left {
-      background-color: #f2f2f2;
+      background-color: #645959;
       color: darkblue;
       position: absolute;
-      left: 0px;
+      left: 10px;
     }
     .react-multiple-carousel__arrow--right {
-      background-color: #f2f2f2;
+      background-color: #645959;
       position: absolute;
       right: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nftCollectionWrapper {
+    .carouselWrapper {
+      height: 450px;
+      .innerSlider {
+        height: 450px;
+        margin-left: 20%;
+      }
     }
   }
 }

@@ -1,10 +1,11 @@
 import React from "react";
 import "./style.scss";
 
-const NFTCollectionCard = () => {
+const NFTCollectionCard = ({ image, bg }) => {
   return (
-    <div className="revolutionCard">
+    <div className="revolutionCard" style={{ backgroundColor: bg }}>
       <div className="cardImage">
+        <img src={image} />
         <div className="play-button">
           <img src="/images/play-btn.svg" alt="img" />
         </div>

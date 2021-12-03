@@ -14,10 +14,10 @@ const TribezRouter = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/market-place" element={<NFTMarketPlace />} />
+        <Route path="/collections" element={<NFTMarketPlace />} />
         <Route path="/product-detail" element={<ProductDetail />} />
-        <Route path="/profile-setting" element={<ProfileSetting />} />
-        <Route path="/cover-page" element={<CoverPage />} />
+        <Route path="/user-settings" element={<ProfileSetting />} />
+        <Route path="/my-profile" element={<CoverPage />} />
       </Routes>
     </BrowserRouter>
   );

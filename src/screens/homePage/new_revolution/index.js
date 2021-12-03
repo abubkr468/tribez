@@ -22,10 +22,7 @@ export const NewRevolution = () => {
               and the appetite for change in an industry that so often
               underserves independent makers is clear.
             </p>
-            <Button
-              className="revolutionButton"
-              onClick={() => navigate("/market-place")}
-            >
+            <Button className="revolutionButton shadow-none">
               WANT TO BECOME A CREATOR ?
             </Button>
           </div>

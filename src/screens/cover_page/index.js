@@ -8,7 +8,19 @@ import {
 } from "reactstrap";
 import BrowseCard from "../../components/browse-nft-card";
 import Page from "../../components/page";
+import ProfileCard from "../../components/profileCard";
 import "./style.scss";
+
+const images = [
+  "/browse-nft/browse-nft-1.png",
+  "/browse-nft/browse-nft-2.png",
+  "/browse-nft/browse-nft-3.png",
+  "/browse-nft/browse-nft-4.png",
+  "/browse-nft/browse-nft-5.png",
+  "/browse-nft/browse-nft-6.png",
+  "/browse-nft/browse-nft-7.png",
+  "/browse-nft/browse-nft-8.png",
+];
 
 const CoverPage = () => {
   const list = ["Listings", "Collections", "Favourites", "Liked"];
@@ -28,8 +40,8 @@ const CoverPage = () => {
       <div className="cover-page-wrapper">
         <div className="cover-page-bg-image"></div>
 
-        <Row className="cover-page-bottom">
-          <Col lg="3">
+        <div className="cover-page-bottom">
+          <div className="">
             <div className="cover-page-left">
               <div className="cover-profile-wrap">
                 <img
@@ -79,8 +91,8 @@ const CoverPage = () => {
                 <img src="/images/wechat.svg" alt="img" />
               </div>
             </div>
-          </Col>
-          <Col lg="9">
+          </div>
+          <div className="">
             <div className="cover-page-right">
               <div className="right-heading">
                 {list.map((i, index) => (
@@ -123,15 +135,15 @@ const CoverPage = () => {
                 </div>
               </div>
               <div className="cover-card-parent">
-                {[...Array(8)].map((i) => (
-                  <div className="cover-page-card mb-2 col-lg-3 col-md-4 col-sm-6">
-                    <BrowseCard />
+                {[...Array(8)].map((i, index) => (
+                  <div className="cover-page-card mb-2 col-lg-3">
+                    <ProfileCard images={images[index]} />
                   </div>
                 ))}
               </div>
             </div>
-          </Col>
-        </Row>
+          </div>
+        </div>
       </div>
     </Page>
   );

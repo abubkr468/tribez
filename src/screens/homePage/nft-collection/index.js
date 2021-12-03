@@ -47,33 +47,32 @@ const NFTCollection = () => {
           renderButtonGroupOutside={true}
           ssr={true}
           infinite={true}
-          autoPlaySpeed={1000}
+          autoPlaySpeed={3000}
           keyBoardControl={true}
-          customTransition="all .5"
           transitionDuration={500}
           sliderClass="innerSlider"
           itemClass="itemClass"
         >
           <div className="carouselItem">
-            <NFTCollectionCard />
+            <NFTCollectionCard image="/images/nft-card.svg" bg={"#090141"} />
           </div>
           <div className="carouselItem">
-            <NFTCollectionCard />
+            <NFTCollectionCard image="/images/carousel-2.svg" bg={"#035F22"} />
           </div>
           <div className="carouselItem">
-            <NFTCollectionCard />
+            <NFTCollectionCard image="/images/carousel-3.svg" bg={"#48017A"} />
           </div>
           <div className="carouselItem">
-            <NFTCollectionCard />
+            <NFTCollectionCard image="/images/carousel-4.svg" bg={"#7C005F"} />
           </div>
           <div className="carouselItem">
-            <NFTCollectionCard />
+            <NFTCollectionCard image="/images/nft-card.svg" bg={"#090141"} />
           </div>
           <div className="carouselItem">
-            <NFTCollectionCard />
+            <NFTCollectionCard image="/images/carousel-2.svg" bg={"#035F22"} />
           </div>
           <div className="carouselItem">
-            <NFTCollectionCard />
+            <NFTCollectionCard image="/images/carousel-3.svg" bg={"#7C005F"} />
           </div>
         </Carousel>
       </div>

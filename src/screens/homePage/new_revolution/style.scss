@@ -10,6 +10,7 @@
     position: absolute;
     top: 180px;
     left: 180px;
+    z-index: -1;
   }
   .revolutionLeft {
     padding-top: 5%;
@@ -20,6 +21,7 @@
       font-size: 56px;
       line-height: 62px;
       margin: 0px;
+      z-index: 1;
     }
     .nftDetail {
       font-family: "Roboto";
@@ -36,7 +38,7 @@
         #fccb94 76.52%,
         #ffde7e 106.09%
       );
-      padding: 12px 30px 12px 30px;
+      padding: 12px 35px 12px 35px;
       border-radius: 40px;
       border: none;
       margin-top: 5vh;
@@ -68,6 +70,7 @@
       background: #fed686;
       position: absolute;
       filter: blur(100px);
+      z-index: -1;
     }
     .revolutionCard {
       width: 387px;

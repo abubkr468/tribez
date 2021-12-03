@@ -3,12 +3,11 @@
   height: 397px;
   border-radius: 10px;
   padding: 5px;
-  background: linear-gradient(146.56deg, #0c0041 1.01%, #070042 102.13%);
+  // background: linear-gradient(146.56deg, #0c0041 1.01%, #070042 102.13%);
 
   .cardImage {
     position: relative;
     height: 70%;
-    background-image: url("../../bg/nft-card.svg");
     .play-button {
       position: absolute;
       bottom: 10px;

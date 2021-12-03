@@ -27,6 +27,26 @@ const NFTMarketPlace = () => {
   const newestToggler = () => {
     setNewestIsOpen(!newestIsOpen);
   };
+
+  const images = [
+    "/browse-nft/browse-nft-1.png",
+    "/browse-nft/browse-nft-2.png",
+    "/browse-nft/browse-nft-3.png",
+    "/browse-nft/browse-nft-4.png",
+    "/browse-nft/browse-nft-5.png",
+    "/browse-nft/browse-nft-6.png",
+    "/browse-nft/browse-nft-7.png",
+    "/browse-nft/browse-nft-8.png",
+    "/browse-nft/browse-nft-1.png",
+    "/browse-nft/browse-nft-2.png",
+    "/browse-nft/browse-nft-3.png",
+    "/browse-nft/browse-nft-4.png",
+    "/browse-nft/browse-nft-5.png",
+    "/browse-nft/browse-nft-6.png",
+    "/browse-nft/browse-nft-7.png",
+    "/browse-nft/browse-nft-8.png",
+  ];
+
   return (
     <Page>
       <div className="nft-market-wrapper">
@@ -84,12 +104,11 @@ const NFTMarketPlace = () => {
               </div>
             </Col>
           </Row>
-          {/* </div> */}
 
           <div className="nft-market-cards">
-            {[...Array(16)].splice(0, 16).map((i) => (
+            {[...Array(16)].splice(0, 16).map((i, index) => (
               <div className="card-nft col-lg-3 col-md-4 col-sm-6">
-                <BrowseCard />
+                <BrowseCard images={images[index]} />
               </div>
             ))}
           </div>

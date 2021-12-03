@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.scss";
 import { InputGroup, Input, Button, FormGroup, Label } from "reactstrap";
+
 const Footer = () => {
   return (
     <div className="footerWrapper">
@@ -10,7 +11,7 @@ const Footer = () => {
           Subscribe for the latest news, drops & collectibles
         </p>
         <InputGroup className="inputGroup">
-          <Input className="shadow-none" />
+          <Input className="footer-input shadow-none" />
           <Button className="subscribeBtn shadow-none">Subscribe</Button>
         </InputGroup>
         <p className="privacyPolicy">
@@ -46,9 +47,7 @@ const Footer = () => {
       </div>
       <div className="footerBottom">
         <div>
-          <span className="ozoneNetworks">
-            © 2018 - 2021 Ozone Networks, Inc
-          </span>
+          <span className="ozoneNetworks">© 2018 - Tribez</span>
         </div>
         <div>
           <span className="privacyPolicy">Privacy Policy</span>
