@@ -34,8 +34,12 @@ export const Header = () => {
           </div>
         </div>
         <ul className="rightNav me-auto">
-          <li className="navLinkBuy">Buy</li>
-          <li className="navLinkBuy">Explore</li>
+          <li className="navLinkBuy" onClick={() => navigate("/my-profile")}>
+            Buy
+          </li>
+          <li className="navLinkBuy" onClick={() => navigate("/my-profile")}>
+            Explore
+          </li>
           <div className="wallet-wrapper">
             <div className="dropdown-wallet">
               <div className="wallet">
