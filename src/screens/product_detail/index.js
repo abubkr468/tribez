@@ -7,6 +7,8 @@ import Page from "../../components/page";
 import "./style.scss";
 import { useNavigate } from "react-router-dom";
 import { Chart } from "./chart";
+import Offers from "../../components/offers";
+import Auctions from "../../components/auctions";
 
 const data = ["All", "Music", "Sound", "Elect.", "Jazz", "Rock"];
 const detail = [
@@ -48,11 +50,11 @@ const ProductDetail = () => {
             <img src="/images/right-arrow-nft.svg" alt="img" />
             <p className="listings">Listings</p>
           </div>
-          <p className="nft-sub-heading">
+          <p className="nft-sub-heading-detail">
             Discover, collect, and sell extraordinary NFTs
           </p>
-          <div className="nft-all-market">
-            <div className="market-wrapper">
+          <div className="nft-detail-all-market">
+            <div className="detail-market-wrapper">
               {data.map((d, index) => (
                 <div
                   className={
@@ -113,34 +115,43 @@ const ProductDetail = () => {
                       <button className="placebid-button">PLACE BID</button>
                     </div>
                   </div>
-                  <div className="detail-bottom-block">
-                    <div className="offers-wrap">
-                      <p>OFFERS</p>
+                  <div className="offers">
+                    <Offers />
+                  </div>
+                </div>
+                <div className="detail-wrapper-mobile">
+                  <div className="detail-top">
+                    <div className="detail-top-heading">
+                      <p>theWeeknd x Ariana G.</p>
+                      <img src="/images/save.svg" />
                     </div>
-                    <table width="100%" className="table-detail">
-                      <tr className="table-heading">
-                        <td className="price">Price</td>
-                        <td className="usd">USD</td>
-                        <td className="expir">Expiration</td>
-                        <td className="from">From</td>
-                      </tr>
-                      {[...Array(7)].map((i) => (
-                        <tr className="table-rows">
-                          <td className="img-price">
-                            <img src="/images/ethereum.svg" alt="img" />
-                            <span className="eth-price">4,554</span>
-                          </td>
-                          <td className="price-usd">$ 2,456,120</td>
-                          <td className="expiration">
-                            <p>
-                              2<span>d</span>14<span>h</span>5<span>m</span>11
-                              <span>s</span>
-                            </p>
-                          </td>
-                          <td className="from-name">zeeshui.ux</td>
-                        </tr>
-                      ))}
-                    </table>
+                    <div className="detail-second-heading">
+                      <span className="detail-heading-by">by</span>
+                      <span className="detail-heading-alanwalk">
+                        alanwalkermusic
+                      </span>
+                      <img src="/images/tick.svg" />
+                    </div>
+                  </div>
+                  <Auctions
+                    heading={"Current Bid"}
+                    img={"/images/ethereum.svg"}
+                    price={"1,545,123"}
+                  />
+                  <Auctions
+                    heading={"Auction Ends in"}
+                    img={"/images/ethereum.svg"}
+                    D={"2"}
+                    d={"d"}
+                    H={"14"}
+                    h={"h"}
+                    M={"5"}
+                    m={"m"}
+                    S={"11"}
+                    s={"s"}
+                  />
+                  <div className="placebid-button-wrap">
+                    <button className="placebid-button">PLACE BID</button>
                   </div>
                 </div>
               </Col>
@@ -164,6 +175,7 @@ const ProductDetail = () => {
                   </p>
                 </div>
               </Col>
+
               <Col lg="6">
                 <div className="description">
                   <div className="description-heading">
@@ -171,12 +183,22 @@ const ProductDetail = () => {
                     <p>HISTORY</p>
                   </div>
                   <div className="history-graph">
-                    <Chart />{" "}
+                    <div className="graph-content">
+                      <Chart />
+                    </div>
+                  </div>
+                </div>
+              </Col>
+              <Col lg="6">
+                <div className="offers-parnt">
+                  <div className="offers-parent">
+                    <Offers />
                   </div>
                 </div>
               </Col>
             </Row>
           </div>
+
           <div className="sugested-nfts">
             <p className="sugested-nfts-first">
               Suggested<span className="sugested-nfts-second">NFT'S</span>
@@ -187,7 +209,7 @@ const ProductDetail = () => {
           </div>
           <div className="nft-market-cards">
             {[...Array(4)].map((i, index) => (
-              <div className="detail-card-prod col-lg-3 col-md-4 col-sm-6">
+              <div className="detail-card-prod col-lg-3 col-md-4 col-sm-12">
                 <BrowseCard images={images[index]} />
               </div>
             ))}

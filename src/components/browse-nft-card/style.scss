@@ -27,14 +27,14 @@
         border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
         .cardLeft {
           width: 70%;
-
           .theWeekend {
             margin: 0px;
-            font-size: 16px;
+            font-size: 13px;
             line-height: 18px;
             margin-bottom: 5px;
             font-weight: 500;
             font-family: "Roboto";
+            color: rgba(0, 0, 0, 0.9);
           }
           .walkerWrapper {
             display: flex;
@@ -43,22 +43,18 @@
             align-items: center;
 
             .by {
-              font-size: 11px;
+              font-size: 13px;
               font-weight: 300;
-              color: #8480a0;
+              color: rgba(0, 0, 0, 0.5);
               font-family: "Roboto";
             }
             .walkerMusic {
-              font-size: 12px;
-              font-weight: 500;
-              margin-left: 5px;
+              margin-left: 2px;
+              color: rgba(0, 0, 0, 0.65);
               text-decoration: underline;
-              font-family: "Roboto";
             }
             > img {
               margin-left: 5px;
-              width: 11px;
-              height: 11px;
             }
           }
         }
@@ -71,7 +67,7 @@
             justify-content: flex-end;
             color: black;
             align-items: center;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
 
             > img {
               width: 9px;
@@ -80,19 +76,22 @@
             }
             .count {
               margin: 0px;
-              font-size: 19px;
+              font-size: 17px;
               font-weight: 700;
               font-family: "Roboto";
-              margin-right: 0px;
+              line-height: 18px;
+              color: rgba(0, 0, 0, 1);
             }
           }
 
           .price {
             margin: 0px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 500;
             font-style: normal;
             font-family: "Roboto";
+            line-height: 18px;
+            color: rgba(0, 0, 0, 0.75);
           }
         }
       }
@@ -112,7 +111,7 @@
         padding-top: 10px;
 
         > span {
-          color: #2081e2;
+          color: rgba(32, 129, 226, 1);
           cursor: pointer;
         }
         > img {
@@ -132,25 +131,30 @@
         right: 10px;
         bottom: 15px;
         cursor: pointer;
-        > img {
-          width: 16px;
-          height: 16px;
-        }
       }
     }
     .browseCardBottom {
       .cardDetail {
+        padding-top: 5px;
         .cardLeft {
           .theWeekend {
             margin: 0px;
-            font-size: 10px;
+            font-size: 11px;
             line-height: 18px;
-            margin-bottom: 5px;
             font-weight: 500;
             font-family: "Roboto";
           }
           .walkerWrapper {
             display: none;
+            .by {
+              display: none;
+            }
+            .walkerMusic {
+              display: none;
+            }
+            > img {
+              display: none;
+            }
           }
         }
         .cardRight {
@@ -188,7 +192,7 @@
         margin-left: 5px;
         margin-right: 5px;
         font-family: "Roboto";
-        font-size: 12px;
+        font-size: 13px;
         > span {
           color: #2081e2;
           cursor: pointer;

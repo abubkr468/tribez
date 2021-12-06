@@ -58,7 +58,7 @@
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
-    margin: 50px 25px 0 25px;
+    // margin: 50px 25px 0 25px;
     .cardWrapper {
       padding: 10px;
       margin-bottom: 10px;
@@ -83,7 +83,7 @@
   }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 578px) {
   .topCollectionWrapper {
     margin-top: 10vh;
     .sellersHeading {
@@ -146,11 +146,7 @@
       justify-content: center;
       flex-wrap: wrap;
       margin-top: 50px;
-      margin-left: 50px;
       .cardWrapper {
-        // flex: 1;
-        margin-bottom: 10px;
-        margin-right: 50px;
       }
     }
   }

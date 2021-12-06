@@ -55,7 +55,6 @@ const NFTMarketPlace = () => {
           <p className="nft-sub-heading">
             Discover, collect, and sell extraordinary NFTs
           </p>
-          {/* <div className="nft-all-market"> */}
           <Row className="nft-all-market">
             <Col className="market-wrapper" lg="6" md="12">
               <div className="market-wrapper">
@@ -107,7 +106,7 @@ const NFTMarketPlace = () => {
 
           <div className="nft-market-cards">
             {[...Array(16)].splice(0, 16).map((i, index) => (
-              <div className="card-nft col-lg-3 col-md-4 col-sm-6">
+              <div className="card-nft col-lg-3 col-md-4 col-sm-12">
                 <BrowseCard images={images[index]} />
               </div>
             ))}

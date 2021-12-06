@@ -8,7 +8,7 @@ const ProfileSetting = () => {
   return (
     <Page>
       <div className="profile-settings-wrapper">
-        <Row>
+        <Row className="g-0">
           <Col lg="3">
             <div className="settings">SETTINGS</div>
           </Col>
@@ -26,7 +26,7 @@ const ProfileSetting = () => {
                   </div>
                 </Col>
                 <Col lg="9">
-                  <div className="cover-image-wrapper">
+                  <div className="cover-image-wrapper w-100">
                     <div className="cover-img-wrap"> </div>
                     <div className="cover-image-text-wrapper">
                       <p>Cover Image</p>

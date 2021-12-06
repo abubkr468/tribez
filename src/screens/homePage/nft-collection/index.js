@@ -43,7 +43,7 @@ const NFTCollection = () => {
           showDots={true}
           dotListClass="dotClass"
           slidesToSlide={1}
-          autoPlay={false}
+          autoPlay={true}
           renderButtonGroupOutside={true}
           ssr={true}
           infinite={true}
@@ -52,6 +52,7 @@ const NFTCollection = () => {
           transitionDuration={500}
           sliderClass="innerSlider"
           itemClass="itemClass"
+          containerClass="containerClass"
         >
           <div className="carouselItem">
             <NFTCollectionCard image="/images/nft-card.svg" bg={"#090141"} />

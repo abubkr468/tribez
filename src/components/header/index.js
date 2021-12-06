@@ -9,6 +9,7 @@ export const Header = () => {
   useEffect(() => {
     if (window.innerWidth > 1000) {
       setIsMobile(false);
+      console.log("object", isMobile);
     }
   }, [setIsMobile]);
 

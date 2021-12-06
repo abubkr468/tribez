@@ -4,14 +4,14 @@ import ProfileForm from "../../components/profile_form";
 const ProfileDetail = () => {
   return (
     <div>
-      <Row>
-        <Col lg="6">
+      <Row className="d-flex justify-content-between">
+        <Col lg="5">
           <ProfileForm label={"UserName"} type={"text"} />
           <ProfileForm label={"Name"} type={"text"} />
           <ProfileForm label={"Email"} type={"email"} />
           <ProfileForm label={"Password"} type={"text"} />
         </Col>
-        <Col lg="6">
+        <Col lg="5">
           <Label className="label">Links</Label>
           <div className="links-wrapper">
             <li className="form-links">

@@ -57,6 +57,12 @@ const CoverPage = () => {
                   <p>alanwalkerm Collection on Tribez.</p>
                   <p> Discover the best items in this collection.</p>
                 </div>
+                <div className="cover-left-text-mobile">
+                  <p>
+                    Welcome to the home of alanwalkerm Collection on Tribez.
+                    Discover the best items in this collection.
+                  </p>
+                </div>
               </div>
               <div className="left-block-wrap">
                 <div className="block-inner-wrap">
@@ -136,12 +142,24 @@ const CoverPage = () => {
               </div>
               <div className="cover-card-parent">
                 {[...Array(8)].map((i, index) => (
-                  <div className="cover-page-card mb-2 col-lg-3">
+                  <div className="cover-page-card mb-2 col-lg-3 col-md-4 col-sm-12">
                     <ProfileCard images={images[index]} />
                   </div>
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+        <div className="des-wrapp">
+          <div className="bottom-description-block">
+            <div className="des-head">DESCRIPTION</div>
+            <p className="bottom-description-text">
+              On a dark and stormy night, a spirit stalks the forecourts of the
+              Oval Stadium. An age-old legend whispers “the Bopara will haunt
+              you for the rest time.” Keeping you awake at night, the Bopara
+              feasts on your embarrassment. You will never leave your home with
+              your pants safely fastened again!{" "}
+            </p>
           </div>
         </div>
       </div>

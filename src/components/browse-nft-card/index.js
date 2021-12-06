@@ -40,7 +40,6 @@ const BrowseCard = ({ images }) => {
                 <p className="price">$ 700,265</p>
               </div>
             </div>
-            {/* <hr className="browse-mid-line w-100" /> */}
             <div className="buyNow">
               <span onClick={() => navigate("/product-detail")}>BUY NOW</span>
               <img

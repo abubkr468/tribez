@@ -23,6 +23,8 @@
     }
     .itemClass {
     }
+    .containerClass {
+    }
     .dotClass {
       column-gap: 15px;
       .react-multi-carousel-dot button {
@@ -39,6 +41,7 @@
       color: darkblue;
       position: absolute;
       left: 10px;
+      overflow: visible;
     }
     .react-multiple-carousel__arrow--right {
       background-color: #f2f2f2;
@@ -63,7 +66,7 @@
   }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 578px) {
   .nftCollectionWrapper {
     margin-top: 10%;
     background-color: white;
@@ -86,6 +89,13 @@
       .innerSlider {
         height: 450px;
         margin-left: 50px;
+      }
+
+      .react-multiple-carousel__arrow--left {
+        left: 0px;
+      }
+      .react-multiple-carousel__arrow--right {
+        right: 0px;
       }
     }
   }
