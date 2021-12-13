@@ -11,7 +11,7 @@
     }
     .sellersYear {
       color: rgba(255, 127, 98, 1);
-      font-family: "Gilroy-Bold";
+      font-family: "Gilroy-Bold", sans-serif;
       font-weight: 800;
       font-size: 36px;
       margin-left: 10px;
@@ -141,7 +141,8 @@
       flex-wrap: wrap;
       margin-top: 0px;
       .cardWrap {
-        margin-bottom: 0px;
+        margin-bottom: 10px;
+        padding: 0px;
       }
     }
     .browseButton {

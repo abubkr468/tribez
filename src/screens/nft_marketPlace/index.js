@@ -80,7 +80,7 @@ const NFTMarketPlace = () => {
                     Filter
                   </DropdownToggle>
                   <DropdownMenu>
-                    <DropdownItem header>Header</DropdownItem>
+                    <DropdownItem>Header</DropdownItem>
                     <DropdownItem>Another Action</DropdownItem>
                     <DropdownItem>Another Action</DropdownItem>
                   </DropdownMenu>
@@ -95,7 +95,7 @@ const NFTMarketPlace = () => {
                     Newest
                   </DropdownToggle>
                   <DropdownMenu>
-                    <DropdownItem header>Header</DropdownItem>
+                    <DropdownItem>Header</DropdownItem>
                     <DropdownItem>Another Action</DropdownItem>
                     <DropdownItem>Another Action</DropdownItem>
                   </DropdownMenu>

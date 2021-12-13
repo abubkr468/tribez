@@ -172,7 +172,7 @@
         position: absolute;
         width: 350px;
         right: 100px;
-        top: 70.5px;
+        top: 70px;
       }
       .navLinkBuy {
         margin-right: 30px;
@@ -246,7 +246,9 @@
       top: 70.5px;
     }
   }
-
+  .navWrapperMobile {
+    display: none;
+  }
   .mobile-menu {
     display: none;
     border: none;
@@ -370,6 +372,7 @@
       }
     }
     .navWrapperMobile {
+      display: block;
       width: 300px;
       position: absolute;
       top: 70px;

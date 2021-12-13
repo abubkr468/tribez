@@ -102,8 +102,8 @@ const CoverPage = () => {
             <div className="cover-page-right">
               <div className="right-heading">
                 {list.map((i, index) => (
-                  <div>
-                    <p onClick={() => setIsSelect(index)}>{i}</p>
+                  <div onClick={() => setIsSelect(index)}>
+                    <p>{i}</p>
                     <div
                       className={isSelect === index ? "selected-line" : null}
                     ></div>

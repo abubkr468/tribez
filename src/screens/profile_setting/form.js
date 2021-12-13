@@ -6,7 +6,7 @@ const ProfileDetail = () => {
     <div>
       <Row className="d-flex justify-content-between">
         <Col lg="5">
-          <ProfileForm label={"UserName"} type={"text"} />
+          <ProfileForm label={"Username"} type={"text"} />
           <ProfileForm label={"Name"} type={"text"} />
           <ProfileForm label={"Email"} type={"email"} />
           <ProfileForm label={"Password"} type={"text"} />

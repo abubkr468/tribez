@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { Chart } from "./chart";
 import Offers from "../../components/offers";
 import Auctions from "../../components/auctions";
+import DetailPageCards from "./suggested-nfts-detail";
 
 const data = ["All", "Music", "Sound", "Elect.", "Jazz", "Rock"];
 const detail = [
@@ -208,11 +209,12 @@ const ProductDetail = () => {
             </p>
           </div>
           <div className="nft-market-cards">
-            {[...Array(4)].map((i, index) => (
+            {/* {[...Array(4)].map((i, index) => (
               <div className="detail-card-prod col-lg-3 col-md-4 col-sm-12">
                 <BrowseCard images={images[index]} />
               </div>
-            ))}
+            ))} */}
+            <DetailPageCards />
           </div>
         </Container>
       </div>

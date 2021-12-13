@@ -77,7 +77,7 @@
     }
   }
   .product-detail-wrapper {
-    margin-top: 20px;
+    margin-top: 10px;
     height: 100%;
     row-gap: 20px;
     .video {
@@ -359,15 +359,24 @@
         }
       }
       .history-graph {
-        padding: 40px;
+        padding: 10px;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        height: 80%;
+        width: 100%;
+        .graph-content {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          padding: 40px;
 
-        > canvas {
-          width: 500px !important;
-          height: 300px !important;
+          > canvas {
+            width: 100% !important;
+            height: 100% !important;
+          }
         }
       }
       > p {
@@ -389,12 +398,12 @@
   .sugested-nfts {
     margin: 30px 0px 30px 0px;
     .sugested-nfts-first {
-      font-family: "Gilroy";
+      font-family: "Gilroy-Bold", sans-serif;
       font-size: 32px;
       font-style: normal;
       font-weight: 800;
       .sugested-nfts-second {
-        font-family: "Gilroy";
+        font-family: "Gilroy-Bold", sans-serif;
         font-size: 36px;
         font-style: normal;
         font-weight: 800;
@@ -413,11 +422,36 @@
 
   .nft-market-cards {
     margin-top: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
+    .innerSlider {
+      column-gap: 15px;
+    }
+    .dotClass {
+      display: none;
 
+      .react-multi-carousel-dot button {
+        background-color: rgba(255, 158, 136, 0.25);
+        border: none;
+      }
+      .react-multi-carousel-dot--active button {
+        background-color: rgba(255, 158, 136, 0.45);
+        border: none;
+      }
+    }
+    .react-multiple-carousel__arrow--left {
+      background-color: #f2f2f2;
+      color: darkblue;
+      position: absolute;
+      left: 10px;
+      overflow: visible;
+    }
+    .react-multiple-carousel__arrow--right {
+      background-color: #f2f2f2;
+      position: absolute;
+      right: 10px;
+    }
+    .react-multiple-carousel__arrow::before {
+      color: #a4a4a4;
+    }
     .detail-card-prod {
       padding: 20px;
     }
@@ -426,20 +460,24 @@
 
 @media screen and (max-width: 425px) {
   .nft-market-wrapper {
+    padding: 10px;
     .nft-heading-top {
       padding-left: 10px;
     }
     .nft-sub-heading-detail {
       padding-left: 10px;
     }
-    padding: 0px;
+    .container {
+      padding: 0px;
+    }
     .nft-detail-all-market {
-      padding-right: 10px;
+      padding-right: 0px;
       overflow: scroll;
+      margin-right: 0px;
       .detail-market-wrapper {
         overflow: scroll;
         padding-left: 10px;
-
+        padding-right: 0px;
         .market-list {
           padding: 5px 15px 5px 15px;
         }
@@ -607,6 +645,13 @@
       flex-direction: row;
       justify-content: center;
       flex-wrap: wrap;
+      .innerSlider {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0px;
+        margin: 0px;
+      }
     }
     .nft-market-button-wrapper {
       display: flex;

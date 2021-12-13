@@ -8,27 +8,35 @@ import "./style.scss";
 const NFTCollection = () => {
   const responsive = {
     superLargeDesktop: {
+      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5,
     },
     desktop: {
-      breakpoint: { max: 3000, min: 1400 },
+      breakpoint: { max: 3000, min: 1024 },
       items: 4,
     },
     tablet: {
-      breakpoint: { max: 139, min: 464 },
+      breakpoint: { max: 1024, min: 768 },
       items: 3,
     },
-    largeMobile: {
-      breakpoint: { max: 1000, min: 768 },
+    smallTablet: {
+      breakpoint: { max: 768, min: 425 },
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 768, min: 0 },
-      items: 1,
+      breakpoint: { max: 425, min: 0 },
+      items: 2,
     },
   };
-
+  const data = [
+    { img: "/images/carousel-2.svg", color: "#035F22" },
+    { img: "/images/carousel-3.svg", color: "#48017A" },
+    { img: "/images/carousel-4.svg", color: "#7C005F" },
+    { img: "/images/nft-card.svg", color: "#090141" },
+    { img: "/images/carousel-2.svg", color: "#035F22" },
+    { img: "/images/carousel-3.svg", color: "#7C005F" },
+  ];
   return (
     <div className="nftCollectionWrapper">
       <h3 className="collectionNFT">Top Collection NFT’s</h3>
@@ -54,27 +62,14 @@ const NFTCollection = () => {
           itemClass="itemClass"
           containerClass="containerClass"
         >
-          <div className="carouselItem">
-            <NFTCollectionCard image="/images/nft-card.svg" bg={"#090141"} />
-          </div>
-          <div className="carouselItem">
-            <NFTCollectionCard image="/images/carousel-2.svg" bg={"#035F22"} />
-          </div>
-          <div className="carouselItem">
-            <NFTCollectionCard image="/images/carousel-3.svg" bg={"#48017A"} />
-          </div>
-          <div className="carouselItem">
-            <NFTCollectionCard image="/images/carousel-4.svg" bg={"#7C005F"} />
-          </div>
-          <div className="carouselItem">
-            <NFTCollectionCard image="/images/nft-card.svg" bg={"#090141"} />
-          </div>
-          <div className="carouselItem">
-            <NFTCollectionCard image="/images/carousel-2.svg" bg={"#035F22"} />
-          </div>
-          <div className="carouselItem">
-            <NFTCollectionCard image="/images/carousel-3.svg" bg={"#7C005F"} />
-          </div>
+          {[...Array(6)].map((i, index) => (
+            <div className="carouselItem">
+              <NFTCollectionCard
+                image={data[index].img}
+                bg={data[index].color}
+              />
+            </div>
+          ))}
         </Carousel>
       </div>
     </div>

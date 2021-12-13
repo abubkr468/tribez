@@ -17,16 +17,20 @@
   }
 
   .carouselWrapper {
-    height: 450px;
     .innerSlider {
-      height: 450px;
+      column-gap: 15px;
+      margin-bottom: 50px;
     }
     .itemClass {
     }
     .containerClass {
     }
+    .react-multi-carousel-item {
+      width: 0px;
+    }
     .dotClass {
       column-gap: 15px;
+
       .react-multi-carousel-dot button {
         background-color: rgba(255, 158, 136, 0.25);
         border: none;
@@ -35,6 +39,10 @@
         background-color: rgba(255, 158, 136, 0.45);
         border: none;
       }
+    }
+    .react-multi-carousel-dot-list {
+      position: absolute;
+      bottom: 0px;
     }
     .react-multiple-carousel__arrow--left {
       background-color: #f2f2f2;
@@ -46,7 +54,7 @@
     .react-multiple-carousel__arrow--right {
       background-color: #f2f2f2;
       position: absolute;
-      right: 30px;
+      right: 10px;
     }
     .react-multiple-carousel__arrow::before {
       color: #a4a4a4;
@@ -57,16 +65,13 @@
 @media only screen and (max-width: 768px) {
   .nftCollectionWrapper {
     .carouselWrapper {
-      height: 450px;
       .innerSlider {
-        height: 450px;
-        margin-left: 20%;
       }
     }
   }
 }
 
-@media only screen and (max-width: 578px) {
+@media only screen and (max-width: 425px) {
   .nftCollectionWrapper {
     margin-top: 10%;
     background-color: white;
@@ -84,19 +89,29 @@
       font-weight: 400;
       text-align: center;
     }
-    .carouselWrapper {
-      height: 450px;
-      .innerSlider {
-        height: 450px;
-        margin-left: 50px;
-      }
+    // .carouselWrapper {
+    //   display: flex;
+    //   flex-direction: row;
+    //   justify-content: center;
+    //   .innerSlider {
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: center;
+    //     column-gap: 5px;
+    //   }
+    //   .carouselItem {
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: center;
+    //     margin: 0px;
+    //   }
 
-      .react-multiple-carousel__arrow--left {
-        left: 0px;
-      }
-      .react-multiple-carousel__arrow--right {
-        right: 0px;
-      }
-    }
+    //   .react-multiple-carousel__arrow--left {
+    //     left: 0px;
+    //   }
+    //   .react-multiple-carousel__arrow--right {
+    //     right: 0px;
+    //   }
+    // }
   }
 }
