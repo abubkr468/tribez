@@ -6,6 +6,14 @@ import NFTCollectionCard from "../../../components/nft-collection-card";
 import "./style.scss";
 
 const NFTCollection = () => {
+  // useEffect(() => {
+  //   document
+  //     .querySelectorAll(".react-multiple-carousel__arrow--left")
+  //     .forEach((i) => {
+  //       i.style.background = "blue !important";
+  //     });
+  // }, []);
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.

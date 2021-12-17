@@ -10,6 +10,7 @@ import { Chart } from "./chart";
 import Offers from "../../components/offers";
 import Auctions from "../../components/auctions";
 import DetailPageCards from "./suggested-nfts-detail";
+import Footer from "../../components/footer";
 
 const data = ["All", "Music", "Sound", "Elect.", "Jazz", "Rock"];
 const detail = [
@@ -217,6 +218,9 @@ const ProductDetail = () => {
             <DetailPageCards />
           </div>
         </Container>
+        <div>
+          <Footer />
+        </div>
       </div>
     </Page>
   );

@@ -15,9 +15,11 @@ const Footer = () => {
           <Button className="subscribeBtn shadow-none">Subscribe</Button>
         </InputGroup>
         <p className="privacyPolicy">
-          After reading the Privacy Notice, you may subscribe for our newsletter
-          to get special offers & surveys delivered to your inbox. Unsubscribe
-          at any time by clicking on the link in the email.
+          After reading the{" "}
+          <span className="privacyNotice">Privacy Notice</span>, you may
+          subscribe for our newsletter to get special offers & surveys delivered
+          to your inbox. Unsubscribe at any time by clicking on the link in the
+          email.
         </p>
         <FormGroup check inline className="checkCont">
           <Input className="shadow-none" type="checkbox" />

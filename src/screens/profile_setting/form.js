@@ -6,13 +6,18 @@ const ProfileDetail = () => {
     <div>
       <Row className="d-flex justify-content-between">
         <Col lg="5">
-          <ProfileForm label={"Username"} type={"text"} />
-          <ProfileForm label={"Name"} type={"text"} />
-          <ProfileForm label={"Email"} type={"email"} />
-          <ProfileForm label={"Password"} type={"text"} />
+          <ProfileForm label={"Username"} type={"text"} steric={"*"} />
+          <ProfileForm label={"Name"} type={"text"} steric={"*"} />
+          <ProfileForm label={"Email"} type={"email"} steric={"*"} />
+          <ProfileForm label={"Password"} type={"text"} steric={"*"} />
         </Col>
         <Col lg="5">
-          <Label className="label">Links</Label>
+          <Label className="label">
+            Links
+            <span className="steric" style={{ marginLeft: "5px" }}>
+              *
+            </span>
+          </Label>
           <div className="links-wrapper">
             <li className="form-links">
               <img src="/images/twiter.svg" />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useLayoutEffect } from "react";
 import { Button } from "reactstrap";
 import BrowseCard from "../../../components/browse-nft-card";
 
@@ -14,6 +14,21 @@ const images = [
   "/browse-nft/browse-nft-8.png",
 ];
 const BrowseNFT = () => {
+  const [show, setShow] = useState(true);
+  const [size, setSize] = useState(0);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize(window.innerWidth);
+      if (window.innerWidth <= 425) {
+        setShow(false);
+      } else {
+        setShow(true);
+      }
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
   return (
     <div className="topCollectionWrapper">
       <div className="sellersHeading">
@@ -30,11 +45,14 @@ const BrowseNFT = () => {
         Discover, collect, and sell extraordinary NFTs
       </p>
       <div className="BrowseCardWrapper">
-        {[...Array(8)].map((i, index) => (
+        {[...Array(8)].slice(0, !show ? 3 : 8).map((i, index) => (
           <div className="cardWrap col-lg-3 col-md-4 col-sm-12">
             <BrowseCard images={images[index]} />
           </div>
         ))}
+      </div>
+      <div className="expandArrow" onClick={() => setShow(!show)}>
+        <img src="/images/expand-arrow.svg" alt="img" />
       </div>
       <div className="browseButton">
         <Button className="nftButton">BROWSE ALL NFT’s</Button>

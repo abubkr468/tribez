@@ -22,7 +22,7 @@ export const Header = () => {
           alt="img"
           onClick={() => navigate("/")}
         />
-        <span className="tribez-line ml-5"></span>
+        <span className="tribez-line"></span>
       </div>
       <div className={isMobile ? "navWrapperMobile" : "navWrapper"}>
         <div className="leftNav navbar-nav me-auto mb-2 mb-lg-0">

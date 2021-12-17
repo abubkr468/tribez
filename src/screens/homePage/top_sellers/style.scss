@@ -1,5 +1,5 @@
 .topCollectionWrapper {
-  margin-top: 10vh;
+  margin-top: 3vh;
   .sellersHeading {
     display: flex;
     flex-direction: row;
@@ -58,11 +58,14 @@
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
-    // margin: 50px 25px 0 25px;
+    margin: 50px 25px 0 25px;
     .cardWrapper {
       padding: 10px;
       margin-bottom: 10px;
     }
+  }
+  .expandArrow {
+    display: none;
   }
 }
 
@@ -85,7 +88,7 @@
 
 @media only screen and (max-width: 578px) {
   .topCollectionWrapper {
-    margin-top: 10vh;
+    margin-top: 5vh !important;
     .sellersHeading {
       display: flex;
       flex-direction: row;
@@ -145,9 +148,13 @@
       flex-direction: row;
       justify-content: center;
       flex-wrap: wrap;
-      margin-top: 50px;
+      margin-top: 20px;
       .cardWrapper {
       }
+    }
+    .expandArrow {
+      display: block;
+      text-align: center;
     }
   }
 }

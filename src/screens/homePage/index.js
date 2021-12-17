@@ -11,12 +11,14 @@ import { NewRevolution } from "./new_revolution";
 const HomePage = () => {
   return (
     <Page>
-      <Container>
-        <NewRevolution />
-        <NFTCollection />
-        <TopArtists />
-        <BrowseNFT />
-      </Container>
+      <div style={{ position: "relative" }}>
+        <Container>
+          <NewRevolution />
+          <NFTCollection />
+          <TopArtists />
+          <BrowseNFT />
+        </Container>
+      </div>
       <Footer />
     </Page>
   );

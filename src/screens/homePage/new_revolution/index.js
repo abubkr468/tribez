@@ -22,6 +22,13 @@ export const NewRevolution = () => {
               <RevolutionCard />
             </div>
             <p className="nftDetail">
+              Music NFTs are changing the way fans connect with their
+              <br /> favorite artists. All kinds of creators are innovating on
+              the blockchain, and <br /> the appetite for change in an industry
+              that
+              <br /> so often underserves independent makers is clear.
+            </p>
+            <p className="nftDetailMobile">
               Music NFTs are changing the way fans connect with their favorite
               artists. All kinds of creators are innovating on the blockchain,
               and the appetite for change in an industry that so often

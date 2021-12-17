@@ -11,12 +11,15 @@ import {
 } from "reactstrap";
 import "./style.scss";
 
-const ProfileForm = ({ label, type, placeholder }) => {
+const ProfileForm = ({ label, type, placeholder, steric }) => {
   return (
     <div>
       <Form>
         <FormGroup>
-          <Label className="label">{label}</Label>
+          <Label className="label">
+            {label}
+            <span className="steric"> {steric}</span>
+          </Label>
           <Input
             className="input-box shadow-none"
             type={type}

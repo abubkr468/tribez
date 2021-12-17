@@ -17,6 +17,11 @@
   }
 
   .carouselWrapper {
+    .carouselItem {
+      // background-color: aqua;
+      // height: 380px;
+      // width: 290px;
+    }
     .innerSlider {
       column-gap: 15px;
       margin-bottom: 50px;
@@ -46,7 +51,6 @@
     }
     .react-multiple-carousel__arrow--left {
       background-color: #f2f2f2;
-      color: darkblue;
       position: absolute;
       left: 10px;
       overflow: visible;
@@ -89,29 +93,20 @@
       font-weight: 400;
       text-align: center;
     }
-    // .carouselWrapper {
-    //   display: flex;
-    //   flex-direction: row;
-    //   justify-content: center;
-    //   .innerSlider {
-    //     display: flex;
-    //     flex-direction: row;
-    //     justify-content: center;
-    //     column-gap: 5px;
-    //   }
-    //   .carouselItem {
-    //     display: flex;
-    //     flex-direction: row;
-    //     justify-content: center;
-    //     margin: 0px;
-    //   }
-
-    //   .react-multiple-carousel__arrow--left {
-    //     left: 0px;
-    //   }
-    //   .react-multiple-carousel__arrow--right {
-    //     right: 0px;
-    //   }
-    // }
+    .carouselWrapper {
+      .react-multiple-carousel__arrow--left {
+        background-color: #323232;
+        width: 28px;
+        height: 28px;
+      }
+      .react-multiple-carousel__arrow--right {
+        background-color: #323232;
+        width: 28px;
+        height: 28px;
+      }
+      .react-multiple-carousel__arrow::before {
+        color: #b1b1b1;
+      }
+    }
   }
 }

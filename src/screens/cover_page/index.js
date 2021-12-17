@@ -90,11 +90,31 @@ const CoverPage = () => {
                 </p>
               </div>
               <div className="left-social-icons-wrapper">
-                <img src="/images/facebook.svg" alt="img" />
-                <img src="/images/instagram.svg" alt="img" />
-                <img src="/images/twitter.svg" alt="img" />
-                <img src="/images/youtube.svg" alt="img" />
-                <img src="/images/wechat.svg" alt="img" />
+                <img
+                  className="facebook-icon"
+                  src="/images/facebook.svg"
+                  alt="img"
+                />
+                <img
+                  className="instagram-icon"
+                  src="/images/instagram.svg"
+                  alt="img"
+                />
+                <img
+                  className="twitter-icon"
+                  src="/images/twitter.svg"
+                  alt="img"
+                />
+                <img
+                  className="youtube-icon"
+                  src="/images/youtube.svg"
+                  alt="img"
+                />
+                <img
+                  className="wechat-icon"
+                  src="/images/wechat.svg"
+                  alt="img"
+                />
               </div>
             </div>
           </div>
@@ -119,7 +139,7 @@ const CoverPage = () => {
                   <Dropdown isOpen={isOpen} toggle={toggleHandler}>
                     <DropdownToggle caret className="filter-button shadow-none">
                       <img src="/images/filter.svg" />
-                      Filter
+                      <span className="filter-btn-text">Filter</span>
                     </DropdownToggle>
                     <DropdownMenu>
                       <DropdownItem header>Header</DropdownItem>
@@ -130,7 +150,7 @@ const CoverPage = () => {
                   <Dropdown isOpen={newestIsOpen} toggle={newestToggler}>
                     <DropdownToggle caret className="newest-button shadow-none">
                       <img src="/images/newest.svg" />
-                      Newest
+                      <span className="filter-btn-text">Newest</span>
                     </DropdownToggle>
                     <DropdownMenu>
                       <DropdownItem header>Header</DropdownItem>

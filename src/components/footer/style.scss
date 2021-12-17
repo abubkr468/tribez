@@ -58,7 +58,7 @@
     }
 
     .privacyPolicy {
-      width: 40%;
+      width: 38%;
       font-family: "Roboto";
       font-size: 15px;
       font-style: normal;
@@ -67,6 +67,9 @@
       letter-spacing: 0em;
       text-align: center;
       margin-top: 40px;
+      .privacyNotice {
+        font-weight: bold;
+      }
     }
     .community {
       font-family: "Roboto";
