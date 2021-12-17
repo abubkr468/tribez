@@ -51,7 +51,10 @@ const BrowseNFT = () => {
           </div>
         ))}
       </div>
-      <div className="expandArrow" onClick={() => setShow(!show)}>
+      <div
+        className={!show ? "expandArrow" : "uparrow"}
+        onClick={() => setShow(!show)}
+      >
         <img src="/images/expand-arrow.svg" alt="img" />
       </div>
       <div className="browseButton">

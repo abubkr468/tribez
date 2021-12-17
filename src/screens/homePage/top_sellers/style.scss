@@ -156,5 +156,12 @@
       display: block;
       text-align: center;
     }
+    .uparrow {
+      display: block;
+      text-align: center;
+      > img {
+        transform: rotate(180deg);
+      }
+    }
   }
 }
